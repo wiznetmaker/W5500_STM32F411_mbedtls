@@ -1,0 +1,1658 @@
+Component: ARM Compiler 5.06 update 7 (build 960) Tool: armlink [4d3601]
+
+==============================================================================
+
+Section Cross References
+
+    startup_stm32f411xe.o(RESET) refers to startup_stm32f411xe.o(STACK) for __initial_sp
+    startup_stm32f411xe.o(RESET) refers to startup_stm32f411xe.o(.text) for Reset_Handler
+    startup_stm32f411xe.o(RESET) refers to stm32f4xx_it.o(i.NMI_Handler) for NMI_Handler
+    startup_stm32f411xe.o(RESET) refers to stm32f4xx_it.o(i.HardFault_Handler) for HardFault_Handler
+    startup_stm32f411xe.o(RESET) refers to stm32f4xx_it.o(i.MemManage_Handler) for MemManage_Handler
+    startup_stm32f411xe.o(RESET) refers to stm32f4xx_it.o(i.BusFault_Handler) for BusFault_Handler
+    startup_stm32f411xe.o(RESET) refers to stm32f4xx_it.o(i.UsageFault_Handler) for UsageFault_Handler
+    startup_stm32f411xe.o(RESET) refers to stm32f4xx_it.o(i.SVC_Handler) for SVC_Handler
+    startup_stm32f411xe.o(RESET) refers to stm32f4xx_it.o(i.DebugMon_Handler) for DebugMon_Handler
+    startup_stm32f411xe.o(RESET) refers to stm32f4xx_it.o(i.PendSV_Handler) for PendSV_Handler
+    startup_stm32f411xe.o(RESET) refers to stm32f4xx_it.o(i.SysTick_Handler) for SysTick_Handler
+    startup_stm32f411xe.o(RESET) refers to stm32f4xx_it.o(i.SPI1_IRQHandler) for SPI1_IRQHandler
+    startup_stm32f411xe.o(RESET) refers to stm32f4xx_it.o(i.DMA2_Stream0_IRQHandler) for DMA2_Stream0_IRQHandler
+    startup_stm32f411xe.o(RESET) refers to stm32f4xx_it.o(i.DMA2_Stream2_IRQHandler) for DMA2_Stream2_IRQHandler
+    startup_stm32f411xe.o(.text) refers to system_stm32f4xx.o(i.SystemInit) for SystemInit
+    startup_stm32f411xe.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    cipher.o(i.mbedtls_cipher_check_tag) refers to cipher.o(i.mbedtls_constant_time_memcmp) for mbedtls_constant_time_memcmp
+    cipher.o(i.mbedtls_cipher_crypt) refers to cipher.o(i.mbedtls_cipher_set_iv) for mbedtls_cipher_set_iv
+    cipher.o(i.mbedtls_cipher_crypt) refers to cipher.o(i.mbedtls_cipher_reset) for mbedtls_cipher_reset
+    cipher.o(i.mbedtls_cipher_crypt) refers to cipher.o(i.mbedtls_cipher_update) for mbedtls_cipher_update
+    cipher.o(i.mbedtls_cipher_crypt) refers to cipher.o(i.mbedtls_cipher_finish) for mbedtls_cipher_finish
+    cipher.o(i.mbedtls_cipher_finish) refers to cipher.o(i.mbedtls_cipher_get_block_size) for mbedtls_cipher_get_block_size
+    cipher.o(i.mbedtls_cipher_info_from_string) refers to strcmp.o(.text) for strcmp
+    cipher.o(i.mbedtls_cipher_init) refers to memseta.o(.text) for __aeabi_memclr4
+    cipher.o(i.mbedtls_cipher_list) refers to cipher.o(.data) for .data
+    cipher.o(i.mbedtls_cipher_set_iv) refers to memcpya.o(.text) for __aeabi_memcpy
+    cipher.o(i.mbedtls_cipher_set_padding_mode) refers to cipher.o(i.add_pkcs_padding) for add_pkcs_padding
+    cipher.o(i.mbedtls_cipher_set_padding_mode) refers to cipher.o(i.get_pkcs_padding) for get_pkcs_padding
+    cipher.o(i.mbedtls_cipher_set_padding_mode) refers to cipher.o(i.add_one_and_zeros_padding) for add_one_and_zeros_padding
+    cipher.o(i.mbedtls_cipher_set_padding_mode) refers to cipher.o(i.get_one_and_zeros_padding) for get_one_and_zeros_padding
+    cipher.o(i.mbedtls_cipher_set_padding_mode) refers to cipher.o(i.add_zeros_and_len_padding) for add_zeros_and_len_padding
+    cipher.o(i.mbedtls_cipher_set_padding_mode) refers to cipher.o(i.get_zeros_and_len_padding) for get_zeros_and_len_padding
+    cipher.o(i.mbedtls_cipher_set_padding_mode) refers to cipher.o(i.add_zeros_padding) for add_zeros_padding
+    cipher.o(i.mbedtls_cipher_set_padding_mode) refers to cipher.o(i.get_zeros_padding) for get_zeros_padding
+    cipher.o(i.mbedtls_cipher_set_padding_mode) refers to cipher.o(i.get_no_padding) for get_no_padding
+    cipher.o(i.mbedtls_cipher_setup) refers to memseta.o(.text) for __aeabi_memclr4
+    cipher.o(i.mbedtls_cipher_setup) refers to cipher.o(i.mbedtls_cipher_set_padding_mode) for mbedtls_cipher_set_padding_mode
+    cipher.o(i.mbedtls_cipher_update) refers to cipher.o(i.mbedtls_cipher_get_block_size) for mbedtls_cipher_get_block_size
+    cipher.o(i.mbedtls_cipher_update) refers to memcpya.o(.text) for __aeabi_memcpy
+    ctr_drbg.o(i.block_cipher_df) refers to memseta.o(.text) for __aeabi_memclr4
+    ctr_drbg.o(i.block_cipher_df) refers to memcpya.o(.text) for __aeabi_memcpy
+    ctr_drbg.o(i.ctr_drbg_self_test_entropy) refers to memcpya.o(.text) for __aeabi_memcpy
+    ctr_drbg.o(i.ctr_drbg_self_test_entropy) refers to ctr_drbg.o(.data) for .data
+    ctr_drbg.o(i.ctr_drbg_update_internal) refers to memseta.o(.text) for __aeabi_memclr4
+    ctr_drbg.o(i.mbedtls_ctr_drbg_init) refers to memseta.o(.text) for __aeabi_memclr4
+    ctr_drbg.o(i.mbedtls_ctr_drbg_random) refers to ctr_drbg.o(i.mbedtls_ctr_drbg_random_with_add) for mbedtls_ctr_drbg_random_with_add
+    ctr_drbg.o(i.mbedtls_ctr_drbg_random_with_add) refers to memseta.o(.text) for __aeabi_memclr4
+    ctr_drbg.o(i.mbedtls_ctr_drbg_random_with_add) refers to ctr_drbg.o(i.mbedtls_ctr_drbg_reseed) for mbedtls_ctr_drbg_reseed
+    ctr_drbg.o(i.mbedtls_ctr_drbg_random_with_add) refers to ctr_drbg.o(i.block_cipher_df) for block_cipher_df
+    ctr_drbg.o(i.mbedtls_ctr_drbg_random_with_add) refers to ctr_drbg.o(i.ctr_drbg_update_internal) for ctr_drbg_update_internal
+    ctr_drbg.o(i.mbedtls_ctr_drbg_random_with_add) refers to memcpya.o(.text) for __aeabi_memcpy
+    ctr_drbg.o(i.mbedtls_ctr_drbg_reseed) refers to ctr_drbg.o(i.mbedtls_ctr_drbg_reseed_internal) for mbedtls_ctr_drbg_reseed_internal
+    ctr_drbg.o(i.mbedtls_ctr_drbg_reseed_internal) refers to memseta.o(.text) for __aeabi_memclr4
+    ctr_drbg.o(i.mbedtls_ctr_drbg_reseed_internal) refers to memcpya.o(.text) for __aeabi_memcpy
+    ctr_drbg.o(i.mbedtls_ctr_drbg_reseed_internal) refers to ctr_drbg.o(i.block_cipher_df) for block_cipher_df
+    ctr_drbg.o(i.mbedtls_ctr_drbg_reseed_internal) refers to ctr_drbg.o(i.ctr_drbg_update_internal) for ctr_drbg_update_internal
+    ctr_drbg.o(i.mbedtls_ctr_drbg_seed) refers to memseta.o(.text) for __aeabi_memclr4
+    ctr_drbg.o(i.mbedtls_ctr_drbg_seed) refers to ctr_drbg.o(i.mbedtls_ctr_drbg_reseed_internal) for mbedtls_ctr_drbg_reseed_internal
+    ctr_drbg.o(i.mbedtls_ctr_drbg_self_test) refers to ctr_drbg.o(i.mbedtls_ctr_drbg_init) for mbedtls_ctr_drbg_init
+    ctr_drbg.o(i.mbedtls_ctr_drbg_self_test) refers to printf8.o(i.__0printf$8) for __2printf
+    ctr_drbg.o(i.mbedtls_ctr_drbg_self_test) refers to ctr_drbg.o(i.mbedtls_ctr_drbg_set_nonce_len) for mbedtls_ctr_drbg_set_nonce_len
+    ctr_drbg.o(i.mbedtls_ctr_drbg_self_test) refers to ctr_drbg.o(i.mbedtls_ctr_drbg_seed) for mbedtls_ctr_drbg_seed
+    ctr_drbg.o(i.mbedtls_ctr_drbg_self_test) refers to ctr_drbg.o(i.mbedtls_ctr_drbg_random) for mbedtls_ctr_drbg_random
+    ctr_drbg.o(i.mbedtls_ctr_drbg_self_test) refers to memcmp.o(.text) for memcmp
+    ctr_drbg.o(i.mbedtls_ctr_drbg_self_test) refers to ctr_drbg.o(i.mbedtls_ctr_drbg_free) for mbedtls_ctr_drbg_free
+    ctr_drbg.o(i.mbedtls_ctr_drbg_self_test) refers to ctr_drbg.o(i.mbedtls_ctr_drbg_reseed) for mbedtls_ctr_drbg_reseed
+    ctr_drbg.o(i.mbedtls_ctr_drbg_self_test) refers to ctr_drbg.o(.data) for .data
+    ctr_drbg.o(i.mbedtls_ctr_drbg_self_test) refers to ctr_drbg.o(.constdata) for .constdata
+    ctr_drbg.o(i.mbedtls_ctr_drbg_self_test) refers to ctr_drbg.o(i.ctr_drbg_self_test_entropy) for ctr_drbg_self_test_entropy
+    ctr_drbg.o(i.mbedtls_ctr_drbg_update) refers to ctr_drbg.o(i.mbedtls_ctr_drbg_update_ret) for mbedtls_ctr_drbg_update_ret
+    ctr_drbg.o(i.mbedtls_ctr_drbg_update_ret) refers to ctr_drbg.o(i.block_cipher_df) for block_cipher_df
+    ctr_drbg.o(i.mbedtls_ctr_drbg_update_ret) refers to ctr_drbg.o(i.ctr_drbg_update_internal) for ctr_drbg_update_internal
+    ctr_drbg.o(i.mbedtls_ctr_drbg_update_seed_file) refers to fread.o(i.fread) for fread
+    ctr_drbg.o(i.mbedtls_ctr_drbg_update_seed_file) refers to ctr_drbg.o(i.mbedtls_ctr_drbg_update_ret) for mbedtls_ctr_drbg_update_ret
+    ctr_drbg.o(i.mbedtls_ctr_drbg_update_seed_file) refers to ctr_drbg.o(i.mbedtls_ctr_drbg_write_seed_file) for mbedtls_ctr_drbg_write_seed_file
+    ctr_drbg.o(i.mbedtls_ctr_drbg_write_seed_file) refers to ctr_drbg.o(i.mbedtls_ctr_drbg_random) for mbedtls_ctr_drbg_random
+    ctr_drbg.o(i.mbedtls_ctr_drbg_write_seed_file) refers to fwrite.o(i.fwrite) for fwrite
+    entropy.o(i.entropy_dummy_source) refers to memseta.o(.text) for __aeabi_memset
+    entropy.o(i.entropy_gather_internal) refers to entropy.o(i.entropy_update) for entropy_update
+    entropy.o(i.mbedtls_entropy_func) refers to entropy.o(i.entropy_gather_internal) for entropy_gather_internal
+    entropy.o(i.mbedtls_entropy_func) refers to memseta.o(.text) for __aeabi_memclr4
+    entropy.o(i.mbedtls_entropy_func) refers to memcpya.o(.text) for __aeabi_memcpy
+    entropy.o(i.mbedtls_entropy_gather) refers to entropy.o(i.entropy_gather_internal) for entropy_gather_internal
+    entropy.o(i.mbedtls_entropy_init) refers to memseta.o(.text) for __aeabi_memclr4
+    entropy.o(i.mbedtls_entropy_init) refers to entropy.o(i.mbedtls_entropy_add_source) for mbedtls_entropy_add_source
+    entropy.o(i.mbedtls_entropy_self_test) refers to memseta.o(.text) for __aeabi_memclr4
+    entropy.o(i.mbedtls_entropy_self_test) refers to printf8.o(i.__0printf$8) for __2printf
+    entropy.o(i.mbedtls_entropy_self_test) refers to entropy.o(i.mbedtls_entropy_init) for mbedtls_entropy_init
+    entropy.o(i.mbedtls_entropy_self_test) refers to entropy.o(i.mbedtls_entropy_gather) for mbedtls_entropy_gather
+    entropy.o(i.mbedtls_entropy_self_test) refers to entropy.o(i.mbedtls_entropy_add_source) for mbedtls_entropy_add_source
+    entropy.o(i.mbedtls_entropy_self_test) refers to entropy.o(i.mbedtls_entropy_update_manual) for mbedtls_entropy_update_manual
+    entropy.o(i.mbedtls_entropy_self_test) refers to entropy.o(i.mbedtls_entropy_func) for mbedtls_entropy_func
+    entropy.o(i.mbedtls_entropy_self_test) refers to entropy.o(i.mbedtls_entropy_free) for mbedtls_entropy_free
+    entropy.o(i.mbedtls_entropy_self_test) refers to entropy.o(i.entropy_dummy_source) for entropy_dummy_source
+    entropy.o(i.mbedtls_entropy_update_manual) refers to entropy.o(i.entropy_update) for entropy_update
+    entropy.o(i.mbedtls_entropy_update_seed_file) refers to fread.o(i.fread) for fread
+    entropy.o(i.mbedtls_entropy_update_seed_file) refers to entropy.o(i.mbedtls_entropy_update_manual) for mbedtls_entropy_update_manual
+    entropy.o(i.mbedtls_entropy_update_seed_file) refers to entropy.o(i.mbedtls_entropy_write_seed_file) for mbedtls_entropy_write_seed_file
+    entropy.o(i.mbedtls_entropy_write_seed_file) refers to entropy.o(i.mbedtls_entropy_func) for mbedtls_entropy_func
+    entropy.o(i.mbedtls_entropy_write_seed_file) refers to fwrite.o(i.fwrite) for fwrite
+    ssl_tls.o(i.mbedtls_ssl_conf_alpn_protocols) refers to strlen.o(.text) for strlen
+    ssl_tls.o(i.mbedtls_ssl_conf_max_frag_len) refers to ssl_tls.o(i.ssl_mfl_code_to_length) for ssl_mfl_code_to_length
+    ssl_tls.o(i.mbedtls_ssl_conf_own_cert) refers to ssl_tls.o(i.ssl_append_key_cert) for ssl_append_key_cert
+    ssl_tls.o(i.mbedtls_ssl_conf_psk) refers to ssl_tls.o(i.ssl_conf_remove_psk) for ssl_conf_remove_psk
+    ssl_tls.o(i.mbedtls_ssl_conf_psk) refers to calloc.o(.text) for calloc
+    ssl_tls.o(i.mbedtls_ssl_conf_psk) refers to memcpya.o(.text) for __aeabi_memcpy
+    ssl_tls.o(i.mbedtls_ssl_config_defaults) refers to memseta.o(.text) for __aeabi_memset
+    ssl_tls.o(i.mbedtls_ssl_config_defaults) refers to memcpya.o(.text) for __aeabi_memcpy4
+    ssl_tls.o(i.mbedtls_ssl_config_defaults) refers to ssl_tls.o(i.mbedtls_ssl_conf_dh_param_bin) for mbedtls_ssl_conf_dh_param_bin
+    ssl_tls.o(i.mbedtls_ssl_config_defaults) refers to ssl_tls.o(i.ssl_cookie_write_dummy) for ssl_cookie_write_dummy
+    ssl_tls.o(i.mbedtls_ssl_config_defaults) refers to ssl_tls.o(i.ssl_cookie_check_dummy) for ssl_cookie_check_dummy
+    ssl_tls.o(i.mbedtls_ssl_config_defaults) refers to ssl_tls.o(.constdata) for .constdata
+    ssl_tls.o(i.mbedtls_ssl_config_defaults) refers to ssl_tls.o(.data) for .data
+    ssl_tls.o(i.mbedtls_ssl_config_free) refers to malloc.o(i.free) for free
+    ssl_tls.o(i.mbedtls_ssl_config_init) refers to memseta.o(.text) for __aeabi_memclr4
+    ssl_tls.o(i.mbedtls_ssl_context_load) refers to ssl_tls.o(i.ssl_context_load) for ssl_context_load
+    ssl_tls.o(i.mbedtls_ssl_context_load) refers to ssl_tls.o(i.mbedtls_ssl_free) for mbedtls_ssl_free
+    ssl_tls.o(i.mbedtls_ssl_context_save) refers to ssl_tls.o(i.ssl_session_save) for ssl_session_save
+    ssl_tls.o(i.mbedtls_ssl_context_save) refers to memcpya.o(.text) for __aeabi_memcpy
+    ssl_tls.o(i.mbedtls_ssl_context_save) refers to strlen.o(.text) for strlen
+    ssl_tls.o(i.mbedtls_ssl_context_save) refers to ssl_tls.o(i.mbedtls_ssl_session_reset_int) for mbedtls_ssl_session_reset_int
+    ssl_tls.o(i.mbedtls_ssl_context_save) refers to ssl_tls.o(.data) for .data
+    ssl_tls.o(i.mbedtls_ssl_derive_keys) refers to ssl_tls.o(i.ssl_compute_master) for ssl_compute_master
+    ssl_tls.o(i.mbedtls_ssl_derive_keys) refers to memcpya.o(.text) for __aeabi_memcpy4
+    ssl_tls.o(i.mbedtls_ssl_derive_keys) refers to ssl_tls.o(i.ssl_populate_transform) for ssl_populate_transform
+    ssl_tls.o(i.mbedtls_ssl_derive_keys) refers to ssl_tls.o(i.tls1_prf) for tls1_prf
+    ssl_tls.o(i.mbedtls_ssl_derive_keys) refers to ssl_tls.o(i.ssl_calc_verify_tls) for ssl_calc_verify_tls
+    ssl_tls.o(i.mbedtls_ssl_derive_keys) refers to ssl_tls.o(i.ssl_calc_finished_tls) for ssl_calc_finished_tls
+    ssl_tls.o(i.mbedtls_ssl_derive_keys) refers to ssl_tls.o(i.tls_prf_sha256) for tls_prf_sha256
+    ssl_tls.o(i.mbedtls_ssl_derive_keys) refers to ssl_tls.o(i.ssl_calc_verify_tls_sha256) for ssl_calc_verify_tls_sha256
+    ssl_tls.o(i.mbedtls_ssl_derive_keys) refers to ssl_tls.o(i.ssl_calc_finished_tls_sha256) for ssl_calc_finished_tls_sha256
+    ssl_tls.o(i.mbedtls_ssl_derive_keys) refers to ssl_tls.o(i.tls_prf_sha384) for tls_prf_sha384
+    ssl_tls.o(i.mbedtls_ssl_derive_keys) refers to ssl_tls.o(i.ssl_calc_verify_tls_sha384) for ssl_calc_verify_tls_sha384
+    ssl_tls.o(i.mbedtls_ssl_derive_keys) refers to ssl_tls.o(i.ssl_calc_finished_tls_sha384) for ssl_calc_finished_tls_sha384
+    ssl_tls.o(i.mbedtls_ssl_free) refers to malloc.o(i.free) for free
+    ssl_tls.o(i.mbedtls_ssl_free) refers to ssl_tls.o(i.mbedtls_ssl_handshake_free) for mbedtls_ssl_handshake_free
+    ssl_tls.o(i.mbedtls_ssl_free) refers to ssl_tls.o(i.mbedtls_ssl_session_free) for mbedtls_ssl_session_free
+    ssl_tls.o(i.mbedtls_ssl_free) refers to strlen.o(.text) for strlen
+    ssl_tls.o(i.mbedtls_ssl_get_input_max_frag_len) refers to ssl_tls.o(i.ssl_mfl_code_to_length) for ssl_mfl_code_to_length
+    ssl_tls.o(i.mbedtls_ssl_get_key_exchange_md_tls1_2) refers to ssl_tls.o(.conststring) for .conststring
+    ssl_tls.o(i.mbedtls_ssl_get_max_frag_len) refers to ssl_tls.o(i.mbedtls_ssl_get_output_max_frag_len) for mbedtls_ssl_get_output_max_frag_len
+    ssl_tls.o(i.mbedtls_ssl_get_max_out_record_payload) refers to ssl_tls.o(i.mbedtls_ssl_get_output_max_frag_len) for mbedtls_ssl_get_output_max_frag_len
+    ssl_tls.o(i.mbedtls_ssl_get_max_out_record_payload) refers to ssl_tls.o(i.mbedtls_ssl_get_current_mtu) for mbedtls_ssl_get_current_mtu
+    ssl_tls.o(i.mbedtls_ssl_get_output_max_frag_len) refers to ssl_tls.o(i.ssl_mfl_code_to_length) for ssl_mfl_code_to_length
+    ssl_tls.o(i.mbedtls_ssl_get_session) refers to ssl_tls.o(i.mbedtls_ssl_session_copy) for mbedtls_ssl_session_copy
+    ssl_tls.o(i.mbedtls_ssl_handshake) refers to ssl_tls.o(i.mbedtls_ssl_handshake_step) for mbedtls_ssl_handshake_step
+    ssl_tls.o(i.mbedtls_ssl_handshake_free) refers to malloc.o(i.free) for free
+    ssl_tls.o(i.mbedtls_ssl_handshake_wrapup) refers to ssl_tls.o(i.mbedtls_ssl_session_free) for mbedtls_ssl_session_free
+    ssl_tls.o(i.mbedtls_ssl_handshake_wrapup) refers to malloc.o(i.free) for free
+    ssl_tls.o(i.mbedtls_ssl_handshake_wrapup) refers to ssl_tls.o(i.mbedtls_ssl_handshake_wrapup_free_hs_transform) for mbedtls_ssl_handshake_wrapup_free_hs_transform
+    ssl_tls.o(i.mbedtls_ssl_handshake_wrapup_free_hs_transform) refers to ssl_tls.o(i.mbedtls_ssl_handshake_free) for mbedtls_ssl_handshake_free
+    ssl_tls.o(i.mbedtls_ssl_handshake_wrapup_free_hs_transform) refers to malloc.o(i.free) for free
+    ssl_tls.o(i.mbedtls_ssl_init) refers to memseta.o(.text) for __aeabi_memclr4
+    ssl_tls.o(i.mbedtls_ssl_optimize_checksum) refers to ssl_tls.o(i.ssl_update_checksum_md5sha1) for ssl_update_checksum_md5sha1
+    ssl_tls.o(i.mbedtls_ssl_optimize_checksum) refers to ssl_tls.o(i.ssl_update_checksum_sha256) for ssl_update_checksum_sha256
+    ssl_tls.o(i.mbedtls_ssl_optimize_checksum) refers to ssl_tls.o(i.ssl_update_checksum_sha384) for ssl_update_checksum_sha384
+    ssl_tls.o(i.mbedtls_ssl_parse_certificate) refers to ssl_tls.o(i.mbedtls_ssl_ciphersuite_uses_srv_cert) for mbedtls_ssl_ciphersuite_uses_srv_cert
+    ssl_tls.o(i.mbedtls_ssl_parse_certificate) refers to ssl_tls.o(i.ssl_srv_check_client_no_crt_notification) for ssl_srv_check_client_no_crt_notification
+    ssl_tls.o(i.mbedtls_ssl_parse_certificate) refers to ssl_tls.o(i.ssl_clear_peer_cert) for ssl_clear_peer_cert
+    ssl_tls.o(i.mbedtls_ssl_parse_certificate) refers to calloc.o(.text) for calloc
+    ssl_tls.o(i.mbedtls_ssl_parse_certificate) refers to ssl_tls.o(i.ssl_parse_certificate_chain) for ssl_parse_certificate_chain
+    ssl_tls.o(i.mbedtls_ssl_parse_certificate) refers to ssl_tls.o(i.ssl_parse_certificate_verify) for ssl_parse_certificate_verify
+    ssl_tls.o(i.mbedtls_ssl_parse_certificate) refers to malloc.o(i.free) for free
+    ssl_tls.o(i.mbedtls_ssl_parse_finished) refers to ssl_tls.o(i.mbedtls_ssl_hs_hdr_len) for mbedtls_ssl_hs_hdr_len
+    ssl_tls.o(i.mbedtls_ssl_parse_finished) refers to memcpya.o(.text) for __aeabi_memcpy4
+    ssl_tls.o(i.mbedtls_ssl_psk_derive_premaster) refers to memseta.o(.text) for __aeabi_memclr
+    ssl_tls.o(i.mbedtls_ssl_psk_derive_premaster) refers to memcpya.o(.text) for __aeabi_memcpy
+    ssl_tls.o(i.mbedtls_ssl_renegotiate) refers to ssl_tls.o(i.ssl_write_hello_request) for ssl_write_hello_request
+    ssl_tls.o(i.mbedtls_ssl_renegotiate) refers to ssl_tls.o(i.mbedtls_ssl_start_renegotiation) for mbedtls_ssl_start_renegotiation
+    ssl_tls.o(i.mbedtls_ssl_renegotiate) refers to ssl_tls.o(i.mbedtls_ssl_handshake) for mbedtls_ssl_handshake
+    ssl_tls.o(i.mbedtls_ssl_resend_hello_request) refers to ssl_tls.o(i.ssl_write_hello_request) for ssl_write_hello_request
+    ssl_tls.o(i.mbedtls_ssl_session_copy) refers to ssl_tls.o(i.mbedtls_ssl_session_free) for mbedtls_ssl_session_free
+    ssl_tls.o(i.mbedtls_ssl_session_copy) refers to memcpya.o(.text) for __aeabi_memcpy4
+    ssl_tls.o(i.mbedtls_ssl_session_copy) refers to calloc.o(.text) for calloc
+    ssl_tls.o(i.mbedtls_ssl_session_copy) refers to malloc.o(i.free) for free
+    ssl_tls.o(i.mbedtls_ssl_session_free) refers to ssl_tls.o(i.ssl_clear_peer_cert) for ssl_clear_peer_cert
+    ssl_tls.o(i.mbedtls_ssl_session_free) refers to malloc.o(i.free) for free
+    ssl_tls.o(i.mbedtls_ssl_session_init) refers to memseta.o(.text) for __aeabi_memclr4
+    ssl_tls.o(i.mbedtls_ssl_session_load) refers to ssl_tls.o(i.ssl_session_load) for ssl_session_load
+    ssl_tls.o(i.mbedtls_ssl_session_load) refers to ssl_tls.o(i.mbedtls_ssl_session_free) for mbedtls_ssl_session_free
+    ssl_tls.o(i.mbedtls_ssl_session_reset) refers to ssl_tls.o(i.mbedtls_ssl_session_reset_int) for mbedtls_ssl_session_reset_int
+    ssl_tls.o(i.mbedtls_ssl_session_reset_int) refers to memseta.o(.text) for __aeabi_memclr
+    ssl_tls.o(i.mbedtls_ssl_session_reset_int) refers to malloc.o(i.free) for free
+    ssl_tls.o(i.mbedtls_ssl_session_reset_int) refers to ssl_tls.o(i.mbedtls_ssl_session_free) for mbedtls_ssl_session_free
+    ssl_tls.o(i.mbedtls_ssl_session_reset_int) refers to ssl_tls.o(i.ssl_handshake_init) for ssl_handshake_init
+    ssl_tls.o(i.mbedtls_ssl_session_save) refers to ssl_tls.o(i.ssl_session_save) for ssl_session_save
+    ssl_tls.o(i.mbedtls_ssl_set_calc_verify_md) refers to ssl_tls.o(i.ssl_calc_verify_tls) for ssl_calc_verify_tls
+    ssl_tls.o(i.mbedtls_ssl_set_calc_verify_md) refers to ssl_tls.o(i.ssl_calc_verify_tls_sha384) for ssl_calc_verify_tls_sha384
+    ssl_tls.o(i.mbedtls_ssl_set_calc_verify_md) refers to ssl_tls.o(i.ssl_calc_verify_tls_sha256) for ssl_calc_verify_tls_sha256
+    ssl_tls.o(i.mbedtls_ssl_set_hostname) refers to strlen.o(.text) for strlen
+    ssl_tls.o(i.mbedtls_ssl_set_hostname) refers to malloc.o(i.free) for free
+    ssl_tls.o(i.mbedtls_ssl_set_hostname) refers to calloc.o(.text) for calloc
+    ssl_tls.o(i.mbedtls_ssl_set_hostname) refers to memcpya.o(.text) for __aeabi_memcpy
+    ssl_tls.o(i.mbedtls_ssl_set_hs_own_cert) refers to ssl_tls.o(i.ssl_append_key_cert) for ssl_append_key_cert
+    ssl_tls.o(i.mbedtls_ssl_set_hs_psk) refers to malloc.o(i.free) for free
+    ssl_tls.o(i.mbedtls_ssl_set_hs_psk) refers to calloc.o(.text) for calloc
+    ssl_tls.o(i.mbedtls_ssl_set_hs_psk) refers to memcpya.o(.text) for __aeabi_memcpy
+    ssl_tls.o(i.mbedtls_ssl_set_session) refers to ssl_tls.o(i.mbedtls_ssl_session_copy) for mbedtls_ssl_session_copy
+    ssl_tls.o(i.mbedtls_ssl_setup) refers to calloc.o(.text) for calloc
+    ssl_tls.o(i.mbedtls_ssl_setup) refers to ssl_tls.o(i.ssl_handshake_init) for ssl_handshake_init
+    ssl_tls.o(i.mbedtls_ssl_setup) refers to malloc.o(i.free) for free
+    ssl_tls.o(i.mbedtls_ssl_start_renegotiation) refers to ssl_tls.o(i.ssl_handshake_init) for ssl_handshake_init
+    ssl_tls.o(i.mbedtls_ssl_start_renegotiation) refers to ssl_tls.o(i.mbedtls_ssl_handshake) for mbedtls_ssl_handshake
+    ssl_tls.o(i.mbedtls_ssl_tls_prf) refers to ssl_tls.o(i.tls1_prf) for tls1_prf
+    ssl_tls.o(i.mbedtls_ssl_tls_prf) refers to ssl_tls.o(i.tls_prf_sha384) for tls_prf_sha384
+    ssl_tls.o(i.mbedtls_ssl_tls_prf) refers to ssl_tls.o(i.tls_prf_sha256) for tls_prf_sha256
+    ssl_tls.o(i.mbedtls_ssl_transform_init) refers to memseta.o(.text) for __aeabi_memclr4
+    ssl_tls.o(i.mbedtls_ssl_transform_init) refers to cipher.o(i.mbedtls_cipher_init) for mbedtls_cipher_init
+    ssl_tls.o(i.mbedtls_ssl_write_certificate) refers to ssl_tls.o(i.mbedtls_ssl_ciphersuite_uses_srv_cert) for mbedtls_ssl_ciphersuite_uses_srv_cert
+    ssl_tls.o(i.mbedtls_ssl_write_certificate) refers to ssl_tls.o(i.mbedtls_ssl_own_cert) for mbedtls_ssl_own_cert
+    ssl_tls.o(i.mbedtls_ssl_write_certificate) refers to memcpya.o(.text) for __aeabi_memcpy
+    ssl_tls.o(i.mbedtls_ssl_write_finished) refers to memcpya.o(.text) for __aeabi_memcpy
+    ssl_tls.o(i.ssl_append_key_cert) refers to calloc.o(.text) for calloc
+    ssl_tls.o(i.ssl_clear_peer_cert) refers to malloc.o(i.free) for free
+    ssl_tls.o(i.ssl_conf_remove_psk) refers to malloc.o(i.free) for free
+    ssl_tls.o(i.ssl_context_load) refers to memcmp.o(.text) for memcmp
+    ssl_tls.o(i.ssl_context_load) refers to ssl_tls.o(i.ssl_session_load) for ssl_session_load
+    ssl_tls.o(i.ssl_context_load) refers to ssl_tls.o(i.mbedtls_ssl_session_free) for mbedtls_ssl_session_free
+    ssl_tls.o(i.ssl_context_load) refers to ssl_tls.o(i.ssl_populate_transform) for ssl_populate_transform
+    ssl_tls.o(i.ssl_context_load) refers to strlen.o(.text) for strlen
+    ssl_tls.o(i.ssl_context_load) refers to ssl_tls.o(i.mbedtls_ssl_handshake_free) for mbedtls_ssl_handshake_free
+    ssl_tls.o(i.ssl_context_load) refers to malloc.o(i.free) for free
+    ssl_tls.o(i.ssl_context_load) refers to ssl_tls.o(.data) for .data
+    ssl_tls.o(i.ssl_context_load) refers to ssl_tls.o(i.tls_prf_sha256) for tls_prf_sha256
+    ssl_tls.o(i.ssl_context_load) refers to ssl_tls.o(i.tls_prf_sha384) for tls_prf_sha384
+    ssl_tls.o(i.ssl_handshake_init) refers to ssl_tls.o(i.mbedtls_ssl_session_free) for mbedtls_ssl_session_free
+    ssl_tls.o(i.ssl_handshake_init) refers to ssl_tls.o(i.mbedtls_ssl_handshake_free) for mbedtls_ssl_handshake_free
+    ssl_tls.o(i.ssl_handshake_init) refers to calloc.o(.text) for calloc
+    ssl_tls.o(i.ssl_handshake_init) refers to ssl_tls.o(i.mbedtls_ssl_session_init) for mbedtls_ssl_session_init
+    ssl_tls.o(i.ssl_handshake_init) refers to ssl_tls.o(i.mbedtls_ssl_transform_init) for mbedtls_ssl_transform_init
+    ssl_tls.o(i.ssl_handshake_init) refers to ssl_tls.o(i.ssl_handshake_params_init) for ssl_handshake_params_init
+    ssl_tls.o(i.ssl_handshake_init) refers to malloc.o(i.free) for free
+    ssl_tls.o(i.ssl_handshake_params_init) refers to memseta.o(.text) for __aeabi_memclr4
+    ssl_tls.o(i.ssl_handshake_params_init) refers to ssl_tls.o(i.ssl_update_checksum_start) for ssl_update_checksum_start
+    ssl_tls.o(i.ssl_parse_certificate_chain) refers to ssl_tls.o(i.mbedtls_ssl_hs_hdr_len) for mbedtls_ssl_hs_hdr_len
+    ssl_tls.o(i.ssl_parse_certificate_chain) refers to memcmp.o(.text) for memcmp
+    ssl_tls.o(i.ssl_parse_certificate_chain) refers to ssl_tls.o(i.ssl_clear_peer_cert) for ssl_clear_peer_cert
+    ssl_tls.o(i.ssl_parse_certificate_verify) refers to ssl_tls.o(i.mbedtls_ssl_check_curve) for mbedtls_ssl_check_curve
+    ssl_tls.o(i.ssl_parse_certificate_verify) refers to ssl_tls.o(i.mbedtls_ssl_check_cert_usage) for mbedtls_ssl_check_cert_usage
+    ssl_tls.o(i.ssl_populate_transform) refers to memcpya.o(.text) for __aeabi_memcpy
+    ssl_tls.o(i.ssl_populate_transform) refers to cipher.o(i.mbedtls_cipher_info_from_type) for mbedtls_cipher_info_from_type
+    ssl_tls.o(i.ssl_populate_transform) refers to cipher.o(i.mbedtls_cipher_setup) for mbedtls_cipher_setup
+    ssl_tls.o(i.ssl_populate_transform) refers to cipher.o(i.mbedtls_cipher_setkey) for mbedtls_cipher_setkey
+    ssl_tls.o(i.ssl_populate_transform) refers to cipher.o(i.mbedtls_cipher_set_padding_mode) for mbedtls_cipher_set_padding_mode
+    ssl_tls.o(i.ssl_populate_transform) refers to ssl_tls.o(i.tls1_prf) for tls1_prf
+    ssl_tls.o(i.ssl_populate_transform) refers to ssl_tls.o(i.tls_prf_sha384) for tls_prf_sha384
+    ssl_tls.o(i.ssl_populate_transform) refers to ssl_tls.o(i.tls_prf_sha256) for tls_prf_sha256
+    ssl_tls.o(i.ssl_session_load) refers to memcmp.o(.text) for memcmp
+    ssl_tls.o(i.ssl_session_load) refers to memcpya.o(.text) for __aeabi_memcpy
+    ssl_tls.o(i.ssl_session_load) refers to calloc.o(.text) for calloc
+    ssl_tls.o(i.ssl_session_load) refers to malloc.o(i.free) for free
+    ssl_tls.o(i.ssl_session_load) refers to ssl_tls.o(.data) for .data
+    ssl_tls.o(i.ssl_session_save) refers to memcpya.o(.text) for __aeabi_memcpy
+    ssl_tls.o(i.ssl_session_save) refers to ssl_tls.o(.data) for .data
+    ssl_tls.o(i.ssl_srv_check_client_no_crt_notification) refers to ssl_tls.o(i.mbedtls_ssl_hs_hdr_len) for mbedtls_ssl_hs_hdr_len
+    ssl_tls.o(i.ssl_srv_check_client_no_crt_notification) refers to memcmp.o(.text) for memcmp
+    ssl_tls.o(i.tls1_prf) refers to strlen.o(.text) for strlen
+    ssl_tls.o(i.tls1_prf) refers to calloc.o(.text) for calloc
+    ssl_tls.o(i.tls1_prf) refers to memcpya.o(.text) for __aeabi_memcpy
+    ssl_tls.o(i.tls1_prf) refers to malloc.o(i.free) for free
+    ssl_tls.o(i.tls_prf_generic) refers to strlen.o(.text) for strlen
+    ssl_tls.o(i.tls_prf_generic) refers to calloc.o(.text) for calloc
+    ssl_tls.o(i.tls_prf_generic) refers to memcpya.o(.text) for __aeabi_memcpy
+    ssl_tls.o(i.tls_prf_generic) refers to malloc.o(i.free) for free
+    ssl_tls.o(i.tls_prf_sha256) refers to ssl_tls.o(i.tls_prf_generic) for tls_prf_generic
+    ssl_tls.o(i.tls_prf_sha384) refers to ssl_tls.o(i.tls_prf_generic) for tls_prf_generic
+    main.o(i.MX_GPIO_Init) refers to memseta.o(.text) for __aeabi_memclr4
+    main.o(i.MX_GPIO_Init) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
+    main.o(i.MX_GPIO_Init) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_Init) for HAL_GPIO_Init
+    main.o(i.MX_SPI1_Init) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_Init) for HAL_SPI_Init
+    main.o(i.MX_SPI1_Init) refers to main.o(.bss) for .bss
+    main.o(i.SystemClock_Config) refers to memseta.o(.text) for __aeabi_memclr4
+    main.o(i.SystemClock_Config) refers to stm32f4xx_hal_rcc.o(i.HAL_RCC_OscConfig) for HAL_RCC_OscConfig
+    main.o(i.SystemClock_Config) refers to stm32f4xx_hal_rcc.o(i.HAL_RCC_ClockConfig) for HAL_RCC_ClockConfig
+    main.o(i.fputc) refers to stm32f4xx_hal_uart.o(i.HAL_UART_Transmit) for HAL_UART_Transmit
+    main.o(i.fputc) refers to main.o(.bss) for .bss
+    main.o(i.main) refers to stm32f4xx_hal.o(i.HAL_Init) for HAL_Init
+    main.o(i.main) refers to main.o(i.SystemClock_Config) for SystemClock_Config
+    main.o(i.main) refers to main.o(i.MX_GPIO_Init) for MX_GPIO_Init
+    main.o(i.main) refers to stm32f4xx_hal_cortex.o(i.HAL_NVIC_SetPriority) for HAL_NVIC_SetPriority
+    main.o(i.main) refers to stm32f4xx_hal_cortex.o(i.HAL_NVIC_EnableIRQ) for HAL_NVIC_EnableIRQ
+    main.o(i.main) refers to main.o(i.MX_SPI1_Init) for MX_SPI1_Init
+    main.o(i.main) refers to stm32f4xx_hal_uart.o(i.HAL_UART_Init) for HAL_UART_Init
+    main.o(i.main) refers to stm32f4xx_hal.o(i.HAL_Delay) for HAL_Delay
+    main.o(i.main) refers to w5x00_spi.o(i.wizchip_spi_initialize) for wizchip_spi_initialize
+    main.o(i.main) refers to w5x00_spi.o(i.wizchip_cris_initialize) for wizchip_cris_initialize
+    main.o(i.main) refers to w5x00_spi.o(i.wizchip_reset) for wizchip_reset
+    main.o(i.main) refers to w5x00_spi.o(i.wizchip_initialize) for wizchip_initialize
+    main.o(i.main) refers to w5x00_spi.o(i.wizchip_check) for wizchip_check
+    main.o(i.main) refers to memcpya.o(.text) for __aeabi_memcpy4
+    main.o(i.main) refers to w5x00_spi.o(i.network_initialize) for network_initialize
+    main.o(i.main) refers to w5x00_spi.o(i.print_network_information) for print_network_information
+    main.o(i.main) refers to main.o(i.wizchip_ssl_init) for wizchip_ssl_init
+    main.o(i.main) refers to printf8.o(i.__0printf$8) for __2printf
+    main.o(i.main) refers to socket.o(i.socket) for socket
+    main.o(i.main) refers to socket.o(i.connect) for connect
+    main.o(i.main) refers to ssl_tls.o(i.mbedtls_ssl_handshake) for mbedtls_ssl_handshake
+    main.o(i.main) refers to ssl_tls.o(i.mbedtls_ssl_get_ciphersuite) for mbedtls_ssl_get_ciphersuite
+    main.o(i.main) refers to memseta.o(.text) for __aeabi_memclr4
+    main.o(i.main) refers to strcpy.o(.text) for strcpy
+    main.o(i.main) refers to strlen.o(.text) for strlen
+    main.o(i.main) refers to socket.o(i.getsockopt) for getsockopt
+    main.o(i.main) refers to main.o(.bss) for .bss
+    main.o(i.main) refers to main.o(i.repeating_timer_callback) for repeating_timer_callback
+    main.o(i.main) refers to main.o(.data) for .data
+    main.o(i.recv_timeout) refers to socket.o(i.getsockopt) for getsockopt
+    main.o(i.recv_timeout) refers to socket.o(i.recv) for recv
+    main.o(i.recv_timeout) refers to main.o(.data) for .data
+    main.o(i.repeating_timer_callback) refers to main.o(.data) for .data
+    main.o(i.ssl_random_callback) refers to rand.o(.text) for rand
+    main.o(i.wizchip_ssl_init) refers to ctr_drbg.o(i.mbedtls_ctr_drbg_init) for mbedtls_ctr_drbg_init
+    main.o(i.wizchip_ssl_init) refers to ssl_tls.o(i.mbedtls_ssl_init) for mbedtls_ssl_init
+    main.o(i.wizchip_ssl_init) refers to ssl_tls.o(i.mbedtls_ssl_config_init) for mbedtls_ssl_config_init
+    main.o(i.wizchip_ssl_init) refers to ssl_tls.o(i.mbedtls_ssl_config_defaults) for mbedtls_ssl_config_defaults
+    main.o(i.wizchip_ssl_init) refers to printf8.o(i.__0printf$8) for __2printf
+    main.o(i.wizchip_ssl_init) refers to ssl_tls.o(i.mbedtls_ssl_conf_authmode) for mbedtls_ssl_conf_authmode
+    main.o(i.wizchip_ssl_init) refers to ssl_tls.o(i.mbedtls_ssl_conf_rng) for mbedtls_ssl_conf_rng
+    main.o(i.wizchip_ssl_init) refers to ssl_tls.o(i.mbedtls_ssl_conf_endpoint) for mbedtls_ssl_conf_endpoint
+    main.o(i.wizchip_ssl_init) refers to ssl_tls.o(i.mbedtls_ssl_conf_read_timeout) for mbedtls_ssl_conf_read_timeout
+    main.o(i.wizchip_ssl_init) refers to ssl_tls.o(i.mbedtls_ssl_setup) for mbedtls_ssl_setup
+    main.o(i.wizchip_ssl_init) refers to ssl_tls.o(i.mbedtls_ssl_set_bio) for mbedtls_ssl_set_bio
+    main.o(i.wizchip_ssl_init) refers to main.o(.bss) for .bss
+    main.o(i.wizchip_ssl_init) refers to main.o(i.ssl_random_callback) for ssl_random_callback
+    main.o(i.wizchip_ssl_init) refers to main.o(i.recv_timeout) for recv_timeout
+    main.o(i.wizchip_ssl_init) refers to socket.o(i.recv) for recv
+    main.o(i.wizchip_ssl_init) refers to socket.o(i.send) for send
+    stm32f4xx_it.o(i.DMA2_Stream0_IRQHandler) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_IRQHandler) for HAL_DMA_IRQHandler
+    stm32f4xx_it.o(i.DMA2_Stream0_IRQHandler) refers to main.o(.bss) for hdma_spi1_rx
+    stm32f4xx_it.o(i.DMA2_Stream2_IRQHandler) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_IRQHandler) for HAL_DMA_IRQHandler
+    stm32f4xx_it.o(i.DMA2_Stream2_IRQHandler) refers to main.o(.bss) for hdma_spi1_tx
+    stm32f4xx_it.o(i.SPI1_IRQHandler) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_IRQHandler) for HAL_SPI_IRQHandler
+    stm32f4xx_it.o(i.SPI1_IRQHandler) refers to main.o(.bss) for hspi1
+    stm32f4xx_it.o(i.SysTick_Handler) refers to stm32f4xx_hal.o(i.HAL_IncTick) for HAL_IncTick
+    stm32f4xx_hal_msp.o(i.HAL_MspInit) refers to stm32f4xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping) for HAL_NVIC_SetPriorityGrouping
+    stm32f4xx_hal_msp.o(i.HAL_SPI_MspDeInit) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_DeInit) for HAL_GPIO_DeInit
+    stm32f4xx_hal_msp.o(i.HAL_SPI_MspDeInit) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_DeInit) for HAL_DMA_DeInit
+    stm32f4xx_hal_msp.o(i.HAL_SPI_MspDeInit) refers to stm32f4xx_hal_cortex.o(i.HAL_NVIC_DisableIRQ) for HAL_NVIC_DisableIRQ
+    stm32f4xx_hal_msp.o(i.HAL_SPI_MspInit) refers to memseta.o(.text) for __aeabi_memclr4
+    stm32f4xx_hal_msp.o(i.HAL_SPI_MspInit) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_Init) for HAL_GPIO_Init
+    stm32f4xx_hal_msp.o(i.HAL_SPI_MspInit) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Init) for HAL_DMA_Init
+    stm32f4xx_hal_msp.o(i.HAL_SPI_MspInit) refers to main.o(i.Error_Handler) for Error_Handler
+    stm32f4xx_hal_msp.o(i.HAL_SPI_MspInit) refers to stm32f4xx_hal_cortex.o(i.HAL_NVIC_SetPriority) for HAL_NVIC_SetPriority
+    stm32f4xx_hal_msp.o(i.HAL_SPI_MspInit) refers to stm32f4xx_hal_cortex.o(i.HAL_NVIC_EnableIRQ) for HAL_NVIC_EnableIRQ
+    stm32f4xx_hal_msp.o(i.HAL_SPI_MspInit) refers to main.o(.bss) for hdma_spi1_tx
+    stm32f4xx_hal_msp.o(i.HAL_SPI_MspInit) refers to main.o(.bss) for hdma_spi1_rx
+    stm32f4xx_hal_msp.o(i.HAL_UART_MspDeInit) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_DeInit) for HAL_GPIO_DeInit
+    stm32f4xx_hal_msp.o(i.HAL_UART_MspInit) refers to memseta.o(.text) for __aeabi_memclr4
+    stm32f4xx_hal_msp.o(i.HAL_UART_MspInit) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_Init) for HAL_GPIO_Init
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Abort) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Abort) for HAL_DMA_Abort
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Abort) refers to system_stm32f4xx.o(.data) for SystemCoreClock
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Abort) refers to stm32f4xx_hal_spi.o(i.SPI_AbortTx_ISR) for SPI_AbortTx_ISR
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Abort) refers to stm32f4xx_hal_spi.o(i.SPI_AbortRx_ISR) for SPI_AbortRx_ISR
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Abort_IT) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Abort_IT) for HAL_DMA_Abort_IT
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Abort_IT) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_AbortCpltCallback) for HAL_SPI_AbortCpltCallback
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Abort_IT) refers to system_stm32f4xx.o(.data) for SystemCoreClock
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Abort_IT) refers to stm32f4xx_hal_spi.o(i.SPI_AbortTx_ISR) for SPI_AbortTx_ISR
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Abort_IT) refers to stm32f4xx_hal_spi.o(i.SPI_AbortRx_ISR) for SPI_AbortRx_ISR
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Abort_IT) refers to stm32f4xx_hal_spi.o(i.SPI_DMATxAbortCallback) for SPI_DMATxAbortCallback
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Abort_IT) refers to stm32f4xx_hal_spi.o(i.SPI_DMARxAbortCallback) for SPI_DMARxAbortCallback
+    stm32f4xx_hal_spi.o(i.HAL_SPI_DMAStop) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Abort) for HAL_DMA_Abort
+    stm32f4xx_hal_spi.o(i.HAL_SPI_DeInit) refers to stm32f4xx_hal_msp.o(i.HAL_SPI_MspDeInit) for HAL_SPI_MspDeInit
+    stm32f4xx_hal_spi.o(i.HAL_SPI_IRQHandler) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Abort_IT) for HAL_DMA_Abort_IT
+    stm32f4xx_hal_spi.o(i.HAL_SPI_IRQHandler) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_ErrorCallback) for HAL_SPI_ErrorCallback
+    stm32f4xx_hal_spi.o(i.HAL_SPI_IRQHandler) refers to stm32f4xx_hal_spi.o(i.SPI_DMAAbortOnError) for SPI_DMAAbortOnError
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Init) refers to stm32f4xx_hal_msp.o(i.HAL_SPI_MspInit) for HAL_SPI_MspInit
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Receive) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Receive) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive) for HAL_SPI_TransmitReceive
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Receive) refers to stm32f4xx_hal_spi.o(i.SPI_EndRxTransaction) for SPI_EndRxTransaction
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Receive_DMA) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive_DMA) for HAL_SPI_TransmitReceive_DMA
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Receive_DMA) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Start_IT) for HAL_DMA_Start_IT
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Receive_DMA) refers to stm32f4xx_hal_spi.o(i.SPI_DMAHalfReceiveCplt) for SPI_DMAHalfReceiveCplt
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Receive_DMA) refers to stm32f4xx_hal_spi.o(i.SPI_DMAReceiveCplt) for SPI_DMAReceiveCplt
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Receive_DMA) refers to stm32f4xx_hal_spi.o(i.SPI_DMAError) for SPI_DMAError
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Receive_IT) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive_IT) for HAL_SPI_TransmitReceive_IT
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Receive_IT) refers to stm32f4xx_hal_spi.o(i.SPI_RxISR_16BIT) for SPI_RxISR_16BIT
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Receive_IT) refers to stm32f4xx_hal_spi.o(i.SPI_RxISR_8BIT) for SPI_RxISR_8BIT
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Transmit) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Transmit) refers to stm32f4xx_hal_spi.o(i.SPI_EndRxTxTransaction) for SPI_EndRxTxTransaction
+    stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive) refers to stm32f4xx_hal_spi.o(i.SPI_EndRxTxTransaction) for SPI_EndRxTxTransaction
+    stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive_DMA) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Start_IT) for HAL_DMA_Start_IT
+    stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive_DMA) refers to stm32f4xx_hal_spi.o(i.SPI_DMAHalfTransmitReceiveCplt) for SPI_DMAHalfTransmitReceiveCplt
+    stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive_DMA) refers to stm32f4xx_hal_spi.o(i.SPI_DMATransmitReceiveCplt) for SPI_DMATransmitReceiveCplt
+    stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive_DMA) refers to stm32f4xx_hal_spi.o(i.SPI_DMAError) for SPI_DMAError
+    stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive_DMA) refers to stm32f4xx_hal_spi.o(i.SPI_DMAHalfReceiveCplt) for SPI_DMAHalfReceiveCplt
+    stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive_DMA) refers to stm32f4xx_hal_spi.o(i.SPI_DMAReceiveCplt) for SPI_DMAReceiveCplt
+    stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive_IT) refers to stm32f4xx_hal_spi.o(i.SPI_2linesRxISR_16BIT) for SPI_2linesRxISR_16BIT
+    stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive_IT) refers to stm32f4xx_hal_spi.o(i.SPI_2linesTxISR_16BIT) for SPI_2linesTxISR_16BIT
+    stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive_IT) refers to stm32f4xx_hal_spi.o(i.SPI_2linesRxISR_8BIT) for SPI_2linesRxISR_8BIT
+    stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive_IT) refers to stm32f4xx_hal_spi.o(i.SPI_2linesTxISR_8BIT) for SPI_2linesTxISR_8BIT
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Transmit_DMA) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Start_IT) for HAL_DMA_Start_IT
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Transmit_DMA) refers to stm32f4xx_hal_spi.o(i.SPI_DMAHalfTransmitCplt) for SPI_DMAHalfTransmitCplt
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Transmit_DMA) refers to stm32f4xx_hal_spi.o(i.SPI_DMATransmitCplt) for SPI_DMATransmitCplt
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Transmit_DMA) refers to stm32f4xx_hal_spi.o(i.SPI_DMAError) for SPI_DMAError
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Transmit_IT) refers to stm32f4xx_hal_spi.o(i.SPI_TxISR_16BIT) for SPI_TxISR_16BIT
+    stm32f4xx_hal_spi.o(i.HAL_SPI_Transmit_IT) refers to stm32f4xx_hal_spi.o(i.SPI_TxISR_8BIT) for SPI_TxISR_8BIT
+    stm32f4xx_hal_spi.o(i.SPI_2linesRxISR_16BIT) refers to stm32f4xx_hal_spi.o(i.SPI_CloseRxTx_ISR) for SPI_CloseRxTx_ISR
+    stm32f4xx_hal_spi.o(i.SPI_2linesRxISR_8BIT) refers to stm32f4xx_hal_spi.o(i.SPI_CloseRxTx_ISR) for SPI_CloseRxTx_ISR
+    stm32f4xx_hal_spi.o(i.SPI_2linesTxISR_16BIT) refers to stm32f4xx_hal_spi.o(i.SPI_CloseRxTx_ISR) for SPI_CloseRxTx_ISR
+    stm32f4xx_hal_spi.o(i.SPI_2linesTxISR_8BIT) refers to stm32f4xx_hal_spi.o(i.SPI_CloseRxTx_ISR) for SPI_CloseRxTx_ISR
+    stm32f4xx_hal_spi.o(i.SPI_AbortRx_ISR) refers to system_stm32f4xx.o(.data) for SystemCoreClock
+    stm32f4xx_hal_spi.o(i.SPI_CloseRxTx_ISR) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_spi.o(i.SPI_CloseRxTx_ISR) refers to stm32f4xx_hal_spi.o(i.SPI_EndRxTxTransaction) for SPI_EndRxTxTransaction
+    stm32f4xx_hal_spi.o(i.SPI_CloseRxTx_ISR) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_ErrorCallback) for HAL_SPI_ErrorCallback
+    stm32f4xx_hal_spi.o(i.SPI_CloseRxTx_ISR) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_TxRxCpltCallback) for HAL_SPI_TxRxCpltCallback
+    stm32f4xx_hal_spi.o(i.SPI_CloseRxTx_ISR) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_RxCpltCallback) for HAL_SPI_RxCpltCallback
+    stm32f4xx_hal_spi.o(i.SPI_CloseRxTx_ISR) refers to system_stm32f4xx.o(.data) for SystemCoreClock
+    stm32f4xx_hal_spi.o(i.SPI_CloseRx_ISR) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_spi.o(i.SPI_CloseRx_ISR) refers to stm32f4xx_hal_spi.o(i.SPI_EndRxTransaction) for SPI_EndRxTransaction
+    stm32f4xx_hal_spi.o(i.SPI_CloseRx_ISR) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_ErrorCallback) for HAL_SPI_ErrorCallback
+    stm32f4xx_hal_spi.o(i.SPI_CloseRx_ISR) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_RxCpltCallback) for HAL_SPI_RxCpltCallback
+    stm32f4xx_hal_spi.o(i.SPI_CloseTx_ISR) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_spi.o(i.SPI_CloseTx_ISR) refers to stm32f4xx_hal_spi.o(i.SPI_EndRxTxTransaction) for SPI_EndRxTxTransaction
+    stm32f4xx_hal_spi.o(i.SPI_CloseTx_ISR) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_ErrorCallback) for HAL_SPI_ErrorCallback
+    stm32f4xx_hal_spi.o(i.SPI_CloseTx_ISR) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_TxCpltCallback) for HAL_SPI_TxCpltCallback
+    stm32f4xx_hal_spi.o(i.SPI_CloseTx_ISR) refers to system_stm32f4xx.o(.data) for SystemCoreClock
+    stm32f4xx_hal_spi.o(i.SPI_DMAAbortOnError) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_ErrorCallback) for HAL_SPI_ErrorCallback
+    stm32f4xx_hal_spi.o(i.SPI_DMAError) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_ErrorCallback) for HAL_SPI_ErrorCallback
+    stm32f4xx_hal_spi.o(i.SPI_DMAHalfReceiveCplt) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_RxHalfCpltCallback) for HAL_SPI_RxHalfCpltCallback
+    stm32f4xx_hal_spi.o(i.SPI_DMAHalfTransmitCplt) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_TxHalfCpltCallback) for HAL_SPI_TxHalfCpltCallback
+    stm32f4xx_hal_spi.o(i.SPI_DMAHalfTransmitReceiveCplt) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_TxRxHalfCpltCallback) for HAL_SPI_TxRxHalfCpltCallback
+    stm32f4xx_hal_spi.o(i.SPI_DMAReceiveCplt) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_spi.o(i.SPI_DMAReceiveCplt) refers to stm32f4xx_hal_spi.o(i.SPI_EndRxTransaction) for SPI_EndRxTransaction
+    stm32f4xx_hal_spi.o(i.SPI_DMAReceiveCplt) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_ErrorCallback) for HAL_SPI_ErrorCallback
+    stm32f4xx_hal_spi.o(i.SPI_DMAReceiveCplt) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_RxCpltCallback) for HAL_SPI_RxCpltCallback
+    stm32f4xx_hal_spi.o(i.SPI_DMARxAbortCallback) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_spi.o(i.SPI_DMARxAbortCallback) refers to stm32f4xx_hal_spi.o(i.SPI_EndRxTxTransaction) for SPI_EndRxTxTransaction
+    stm32f4xx_hal_spi.o(i.SPI_DMARxAbortCallback) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_AbortCpltCallback) for HAL_SPI_AbortCpltCallback
+    stm32f4xx_hal_spi.o(i.SPI_DMATransmitCplt) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_spi.o(i.SPI_DMATransmitCplt) refers to stm32f4xx_hal_spi.o(i.SPI_EndRxTxTransaction) for SPI_EndRxTxTransaction
+    stm32f4xx_hal_spi.o(i.SPI_DMATransmitCplt) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_ErrorCallback) for HAL_SPI_ErrorCallback
+    stm32f4xx_hal_spi.o(i.SPI_DMATransmitCplt) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_TxCpltCallback) for HAL_SPI_TxCpltCallback
+    stm32f4xx_hal_spi.o(i.SPI_DMATransmitReceiveCplt) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_spi.o(i.SPI_DMATransmitReceiveCplt) refers to stm32f4xx_hal_spi.o(i.SPI_EndRxTxTransaction) for SPI_EndRxTxTransaction
+    stm32f4xx_hal_spi.o(i.SPI_DMATransmitReceiveCplt) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_ErrorCallback) for HAL_SPI_ErrorCallback
+    stm32f4xx_hal_spi.o(i.SPI_DMATransmitReceiveCplt) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_TxRxCpltCallback) for HAL_SPI_TxRxCpltCallback
+    stm32f4xx_hal_spi.o(i.SPI_DMATxAbortCallback) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_AbortCpltCallback) for HAL_SPI_AbortCpltCallback
+    stm32f4xx_hal_spi.o(i.SPI_DMATxAbortCallback) refers to system_stm32f4xx.o(.data) for SystemCoreClock
+    stm32f4xx_hal_spi.o(i.SPI_EndRxTransaction) refers to stm32f4xx_hal_spi.o(i.SPI_WaitFlagStateUntilTimeout) for SPI_WaitFlagStateUntilTimeout
+    stm32f4xx_hal_spi.o(i.SPI_EndRxTxTransaction) refers to stm32f4xx_hal_spi.o(i.SPI_WaitFlagStateUntilTimeout) for SPI_WaitFlagStateUntilTimeout
+    stm32f4xx_hal_spi.o(i.SPI_EndRxTxTransaction) refers to system_stm32f4xx.o(.data) for SystemCoreClock
+    stm32f4xx_hal_spi.o(i.SPI_RxISR_16BIT) refers to stm32f4xx_hal_spi.o(i.SPI_CloseRx_ISR) for SPI_CloseRx_ISR
+    stm32f4xx_hal_spi.o(i.SPI_RxISR_8BIT) refers to stm32f4xx_hal_spi.o(i.SPI_CloseRx_ISR) for SPI_CloseRx_ISR
+    stm32f4xx_hal_spi.o(i.SPI_TxISR_16BIT) refers to stm32f4xx_hal_spi.o(i.SPI_CloseTx_ISR) for SPI_CloseTx_ISR
+    stm32f4xx_hal_spi.o(i.SPI_TxISR_8BIT) refers to stm32f4xx_hal_spi.o(i.SPI_CloseTx_ISR) for SPI_CloseTx_ISR
+    stm32f4xx_hal_spi.o(i.SPI_WaitFlagStateUntilTimeout) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_spi.o(i.SPI_WaitFlagStateUntilTimeout) refers to system_stm32f4xx.o(.data) for SystemCoreClock
+    stm32f4xx_hal_rcc.o(i.HAL_RCC_ClockConfig) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_rcc.o(i.HAL_RCC_ClockConfig) refers to stm32f4xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq) for HAL_RCC_GetSysClockFreq
+    stm32f4xx_hal_rcc.o(i.HAL_RCC_ClockConfig) refers to stm32f4xx_hal.o(i.HAL_InitTick) for HAL_InitTick
+    stm32f4xx_hal_rcc.o(i.HAL_RCC_ClockConfig) refers to system_stm32f4xx.o(.constdata) for AHBPrescTable
+    stm32f4xx_hal_rcc.o(i.HAL_RCC_ClockConfig) refers to system_stm32f4xx.o(.data) for SystemCoreClock
+    stm32f4xx_hal_rcc.o(i.HAL_RCC_ClockConfig) refers to stm32f4xx_hal.o(.data) for uwTickPrio
+    stm32f4xx_hal_rcc.o(i.HAL_RCC_GetHCLKFreq) refers to system_stm32f4xx.o(.data) for SystemCoreClock
+    stm32f4xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq) refers to system_stm32f4xx.o(.data) for SystemCoreClock
+    stm32f4xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq) refers to system_stm32f4xx.o(.constdata) for APBPrescTable
+    stm32f4xx_hal_rcc.o(i.HAL_RCC_GetPCLK2Freq) refers to system_stm32f4xx.o(.data) for SystemCoreClock
+    stm32f4xx_hal_rcc.o(i.HAL_RCC_GetPCLK2Freq) refers to system_stm32f4xx.o(.constdata) for APBPrescTable
+    stm32f4xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq) refers to uldiv.o(.text) for __aeabi_uldivmod
+    stm32f4xx_hal_rcc.o(i.HAL_RCC_MCOConfig) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_Init) for HAL_GPIO_Init
+    stm32f4xx_hal_rcc.o(i.HAL_RCC_NMI_IRQHandler) refers to stm32f4xx_hal_rcc.o(i.HAL_RCC_CSSCallback) for HAL_RCC_CSSCallback
+    stm32f4xx_hal_rcc.o(i.HAL_RCC_OscConfig) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_rcc_ex.o(i.HAL_RCCEx_DisablePLLI2S) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_rcc_ex.o(i.HAL_RCCEx_EnablePLLI2S) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_rcc_ex.o(i.HAL_RCCEx_PeriphCLKConfig) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_rcc_ex.o(i.HAL_RCC_DeInit) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_rcc_ex.o(i.HAL_RCC_DeInit) refers to stm32f4xx_hal.o(i.HAL_InitTick) for HAL_InitTick
+    stm32f4xx_hal_rcc_ex.o(i.HAL_RCC_DeInit) refers to system_stm32f4xx.o(.data) for SystemCoreClock
+    stm32f4xx_hal_rcc_ex.o(i.HAL_RCC_DeInit) refers to stm32f4xx_hal.o(.data) for uwTickPrio
+    stm32f4xx_hal_flash.o(i.FLASH_SetErrorCode) refers to stm32f4xx_hal_flash.o(.bss) for .bss
+    stm32f4xx_hal_flash.o(i.FLASH_WaitForLastOperation) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_flash.o(i.FLASH_WaitForLastOperation) refers to stm32f4xx_hal_flash.o(i.FLASH_SetErrorCode) for FLASH_SetErrorCode
+    stm32f4xx_hal_flash.o(i.FLASH_WaitForLastOperation) refers to stm32f4xx_hal_flash.o(.bss) for .bss
+    stm32f4xx_hal_flash.o(i.HAL_FLASH_GetError) refers to stm32f4xx_hal_flash.o(.bss) for .bss
+    stm32f4xx_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to stm32f4xx_hal_flash.o(i.FLASH_SetErrorCode) for FLASH_SetErrorCode
+    stm32f4xx_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to stm32f4xx_hal_flash.o(i.HAL_FLASH_OperationErrorCallback) for HAL_FLASH_OperationErrorCallback
+    stm32f4xx_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to stm32f4xx_hal_flash.o(i.HAL_FLASH_EndOfOperationCallback) for HAL_FLASH_EndOfOperationCallback
+    stm32f4xx_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to stm32f4xx_hal_flash_ex.o(i.FLASH_Erase_Sector) for FLASH_Erase_Sector
+    stm32f4xx_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to stm32f4xx_hal_flash_ex.o(i.FLASH_FlushCaches) for FLASH_FlushCaches
+    stm32f4xx_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to stm32f4xx_hal_flash.o(.bss) for .bss
+    stm32f4xx_hal_flash.o(i.HAL_FLASH_OB_Launch) refers to stm32f4xx_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f4xx_hal_flash.o(i.HAL_FLASH_Program) refers to stm32f4xx_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f4xx_hal_flash.o(i.HAL_FLASH_Program) refers to stm32f4xx_hal_flash.o(i.FLASH_Program_DoubleWord) for FLASH_Program_DoubleWord
+    stm32f4xx_hal_flash.o(i.HAL_FLASH_Program) refers to stm32f4xx_hal_flash.o(i.FLASH_Program_Byte) for FLASH_Program_Byte
+    stm32f4xx_hal_flash.o(i.HAL_FLASH_Program) refers to stm32f4xx_hal_flash.o(i.FLASH_Program_HalfWord) for FLASH_Program_HalfWord
+    stm32f4xx_hal_flash.o(i.HAL_FLASH_Program) refers to stm32f4xx_hal_flash.o(i.FLASH_Program_Word) for FLASH_Program_Word
+    stm32f4xx_hal_flash.o(i.HAL_FLASH_Program) refers to stm32f4xx_hal_flash.o(.bss) for .bss
+    stm32f4xx_hal_flash.o(i.HAL_FLASH_Program_IT) refers to stm32f4xx_hal_flash.o(i.FLASH_Program_DoubleWord) for FLASH_Program_DoubleWord
+    stm32f4xx_hal_flash.o(i.HAL_FLASH_Program_IT) refers to stm32f4xx_hal_flash.o(i.FLASH_Program_Byte) for FLASH_Program_Byte
+    stm32f4xx_hal_flash.o(i.HAL_FLASH_Program_IT) refers to stm32f4xx_hal_flash.o(i.FLASH_Program_HalfWord) for FLASH_Program_HalfWord
+    stm32f4xx_hal_flash.o(i.HAL_FLASH_Program_IT) refers to stm32f4xx_hal_flash.o(i.FLASH_Program_Word) for FLASH_Program_Word
+    stm32f4xx_hal_flash.o(i.HAL_FLASH_Program_IT) refers to stm32f4xx_hal_flash.o(.bss) for .bss
+    stm32f4xx_hal_flash_ex.o(i.HAL_FLASHEx_AdvOBProgram) refers to stm32f4xx_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f4xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase) refers to stm32f4xx_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f4xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase) refers to stm32f4xx_hal_flash_ex.o(i.FLASH_MassErase) for FLASH_MassErase
+    stm32f4xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase) refers to stm32f4xx_hal_flash_ex.o(i.FLASH_Erase_Sector) for FLASH_Erase_Sector
+    stm32f4xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase) refers to stm32f4xx_hal_flash_ex.o(i.FLASH_FlushCaches) for FLASH_FlushCaches
+    stm32f4xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase) refers to stm32f4xx_hal_flash.o(.bss) for pFlash
+    stm32f4xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase_IT) refers to stm32f4xx_hal_flash_ex.o(i.FLASH_Erase_Sector) for FLASH_Erase_Sector
+    stm32f4xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase_IT) refers to stm32f4xx_hal_flash_ex.o(i.FLASH_MassErase) for FLASH_MassErase
+    stm32f4xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase_IT) refers to stm32f4xx_hal_flash.o(.bss) for pFlash
+    stm32f4xx_hal_flash_ex.o(i.HAL_FLASHEx_OBProgram) refers to stm32f4xx_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f4xx_hal_flash_ex.o(i.HAL_FLASHEx_OBProgram) refers to stm32f4xx_hal_flash.o(.bss) for pFlash
+    stm32f4xx_hal_gpio.o(i.HAL_GPIO_EXTI_IRQHandler) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_EXTI_Callback) for HAL_GPIO_EXTI_Callback
+    stm32f4xx_hal_dma_ex.o(i.HAL_DMAEx_MultiBufferStart) refers to stm32f4xx_hal_dma_ex.o(i.DMA_MultiBufferSetConfig) for DMA_MultiBufferSetConfig
+    stm32f4xx_hal_dma_ex.o(i.HAL_DMAEx_MultiBufferStart_IT) refers to stm32f4xx_hal_dma_ex.o(i.DMA_MultiBufferSetConfig) for DMA_MultiBufferSetConfig
+    stm32f4xx_hal_dma.o(i.DMA_CalcBaseAndBitshift) refers to stm32f4xx_hal_dma.o(.constdata) for .constdata
+    stm32f4xx_hal_dma.o(i.HAL_DMA_Abort) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_dma.o(i.HAL_DMA_DeInit) refers to stm32f4xx_hal_dma.o(i.DMA_CalcBaseAndBitshift) for DMA_CalcBaseAndBitshift
+    stm32f4xx_hal_dma.o(i.HAL_DMA_IRQHandler) refers to system_stm32f4xx.o(.data) for SystemCoreClock
+    stm32f4xx_hal_dma.o(i.HAL_DMA_Init) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_dma.o(i.HAL_DMA_Init) refers to stm32f4xx_hal_dma.o(i.DMA_CheckFifoParam) for DMA_CheckFifoParam
+    stm32f4xx_hal_dma.o(i.HAL_DMA_Init) refers to stm32f4xx_hal_dma.o(i.DMA_CalcBaseAndBitshift) for DMA_CalcBaseAndBitshift
+    stm32f4xx_hal_dma.o(i.HAL_DMA_PollForTransfer) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_dma.o(i.HAL_DMA_PollForTransfer) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Abort) for HAL_DMA_Abort
+    stm32f4xx_hal_dma.o(i.HAL_DMA_Start) refers to stm32f4xx_hal_dma.o(i.DMA_SetConfig) for DMA_SetConfig
+    stm32f4xx_hal_dma.o(i.HAL_DMA_Start_IT) refers to stm32f4xx_hal_dma.o(i.DMA_SetConfig) for DMA_SetConfig
+    stm32f4xx_hal_pwr.o(i.HAL_PWR_PVD_IRQHandler) refers to stm32f4xx_hal_pwr.o(i.HAL_PWR_PVDCallback) for HAL_PWR_PVDCallback
+    stm32f4xx_hal_pwr_ex.o(i.HAL_PWREx_ControlVoltageScaling) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_pwr_ex.o(i.HAL_PWREx_DisableBkUpReg) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_pwr_ex.o(i.HAL_PWREx_EnableBkUpReg) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_cortex.o(i.HAL_NVIC_SetPriority) refers to stm32f4xx_hal_cortex.o(i.__NVIC_SetPriority) for __NVIC_SetPriority
+    stm32f4xx_hal_cortex.o(i.HAL_SYSTICK_Config) refers to stm32f4xx_hal_cortex.o(i.__NVIC_SetPriority) for __NVIC_SetPriority
+    stm32f4xx_hal_cortex.o(i.HAL_SYSTICK_IRQHandler) refers to stm32f4xx_hal_cortex.o(i.HAL_SYSTICK_Callback) for HAL_SYSTICK_Callback
+    stm32f4xx_hal.o(i.HAL_DeInit) refers to stm32f4xx_hal.o(i.HAL_MspDeInit) for HAL_MspDeInit
+    stm32f4xx_hal.o(i.HAL_Delay) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal.o(i.HAL_Delay) refers to stm32f4xx_hal.o(.data) for .data
+    stm32f4xx_hal.o(i.HAL_GetTick) refers to stm32f4xx_hal.o(.data) for .data
+    stm32f4xx_hal.o(i.HAL_GetTickFreq) refers to stm32f4xx_hal.o(.data) for .data
+    stm32f4xx_hal.o(i.HAL_GetTickPrio) refers to stm32f4xx_hal.o(.data) for .data
+    stm32f4xx_hal.o(i.HAL_IncTick) refers to stm32f4xx_hal.o(.data) for .data
+    stm32f4xx_hal.o(i.HAL_Init) refers to stm32f4xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping) for HAL_NVIC_SetPriorityGrouping
+    stm32f4xx_hal.o(i.HAL_Init) refers to stm32f4xx_hal.o(i.HAL_InitTick) for HAL_InitTick
+    stm32f4xx_hal.o(i.HAL_Init) refers to stm32f4xx_hal_msp.o(i.HAL_MspInit) for HAL_MspInit
+    stm32f4xx_hal.o(i.HAL_InitTick) refers to stm32f4xx_hal_cortex.o(i.HAL_SYSTICK_Config) for HAL_SYSTICK_Config
+    stm32f4xx_hal.o(i.HAL_InitTick) refers to stm32f4xx_hal_cortex.o(i.HAL_NVIC_SetPriority) for HAL_NVIC_SetPriority
+    stm32f4xx_hal.o(i.HAL_InitTick) refers to stm32f4xx_hal.o(.data) for .data
+    stm32f4xx_hal.o(i.HAL_InitTick) refers to system_stm32f4xx.o(.data) for SystemCoreClock
+    stm32f4xx_hal.o(i.HAL_SetTickFreq) refers to stm32f4xx_hal.o(i.HAL_InitTick) for HAL_InitTick
+    stm32f4xx_hal.o(i.HAL_SetTickFreq) refers to stm32f4xx_hal.o(.data) for .data
+    stm32f4xx_hal_uart.o(i.HAL_HalfDuplex_Init) refers to stm32f4xx_hal_msp.o(i.HAL_UART_MspInit) for HAL_UART_MspInit
+    stm32f4xx_hal_uart.o(i.HAL_HalfDuplex_Init) refers to stm32f4xx_hal_uart.o(i.UART_SetConfig) for UART_SetConfig
+    stm32f4xx_hal_uart.o(i.HAL_LIN_Init) refers to stm32f4xx_hal_msp.o(i.HAL_UART_MspInit) for HAL_UART_MspInit
+    stm32f4xx_hal_uart.o(i.HAL_LIN_Init) refers to stm32f4xx_hal_uart.o(i.UART_SetConfig) for UART_SetConfig
+    stm32f4xx_hal_uart.o(i.HAL_MultiProcessor_Init) refers to stm32f4xx_hal_msp.o(i.HAL_UART_MspInit) for HAL_UART_MspInit
+    stm32f4xx_hal_uart.o(i.HAL_MultiProcessor_Init) refers to stm32f4xx_hal_uart.o(i.UART_SetConfig) for UART_SetConfig
+    stm32f4xx_hal_uart.o(i.HAL_UARTEx_ReceiveToIdle) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_uart.o(i.HAL_UARTEx_ReceiveToIdle_DMA) refers to stm32f4xx_hal_uart.o(i.UART_Start_Receive_DMA) for UART_Start_Receive_DMA
+    stm32f4xx_hal_uart.o(i.HAL_UARTEx_ReceiveToIdle_IT) refers to stm32f4xx_hal_uart.o(i.UART_Start_Receive_IT) for UART_Start_Receive_IT
+    stm32f4xx_hal_uart.o(i.HAL_UART_Abort) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Abort) for HAL_DMA_Abort
+    stm32f4xx_hal_uart.o(i.HAL_UART_Abort) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_GetError) for HAL_DMA_GetError
+    stm32f4xx_hal_uart.o(i.HAL_UART_AbortReceive) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Abort) for HAL_DMA_Abort
+    stm32f4xx_hal_uart.o(i.HAL_UART_AbortReceive) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_GetError) for HAL_DMA_GetError
+    stm32f4xx_hal_uart.o(i.HAL_UART_AbortReceive_IT) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Abort_IT) for HAL_DMA_Abort_IT
+    stm32f4xx_hal_uart.o(i.HAL_UART_AbortReceive_IT) refers to stm32f4xx_hal_uart.o(i.HAL_UART_AbortReceiveCpltCallback) for HAL_UART_AbortReceiveCpltCallback
+    stm32f4xx_hal_uart.o(i.HAL_UART_AbortReceive_IT) refers to stm32f4xx_hal_uart.o(i.UART_DMARxOnlyAbortCallback) for UART_DMARxOnlyAbortCallback
+    stm32f4xx_hal_uart.o(i.HAL_UART_AbortTransmit) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Abort) for HAL_DMA_Abort
+    stm32f4xx_hal_uart.o(i.HAL_UART_AbortTransmit) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_GetError) for HAL_DMA_GetError
+    stm32f4xx_hal_uart.o(i.HAL_UART_AbortTransmit_IT) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Abort_IT) for HAL_DMA_Abort_IT
+    stm32f4xx_hal_uart.o(i.HAL_UART_AbortTransmit_IT) refers to stm32f4xx_hal_uart.o(i.HAL_UART_AbortTransmitCpltCallback) for HAL_UART_AbortTransmitCpltCallback
+    stm32f4xx_hal_uart.o(i.HAL_UART_AbortTransmit_IT) refers to stm32f4xx_hal_uart.o(i.UART_DMATxOnlyAbortCallback) for UART_DMATxOnlyAbortCallback
+    stm32f4xx_hal_uart.o(i.HAL_UART_Abort_IT) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Abort_IT) for HAL_DMA_Abort_IT
+    stm32f4xx_hal_uart.o(i.HAL_UART_Abort_IT) refers to stm32f4xx_hal_uart.o(i.HAL_UART_AbortCpltCallback) for HAL_UART_AbortCpltCallback
+    stm32f4xx_hal_uart.o(i.HAL_UART_Abort_IT) refers to stm32f4xx_hal_uart.o(i.UART_DMATxAbortCallback) for UART_DMATxAbortCallback
+    stm32f4xx_hal_uart.o(i.HAL_UART_Abort_IT) refers to stm32f4xx_hal_uart.o(i.UART_DMARxAbortCallback) for UART_DMARxAbortCallback
+    stm32f4xx_hal_uart.o(i.HAL_UART_DMAStop) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Abort) for HAL_DMA_Abort
+    stm32f4xx_hal_uart.o(i.HAL_UART_DMAStop) refers to stm32f4xx_hal_uart.o(i.UART_EndTxTransfer) for UART_EndTxTransfer
+    stm32f4xx_hal_uart.o(i.HAL_UART_DMAStop) refers to stm32f4xx_hal_uart.o(i.UART_EndRxTransfer) for UART_EndRxTransfer
+    stm32f4xx_hal_uart.o(i.HAL_UART_DeInit) refers to stm32f4xx_hal_msp.o(i.HAL_UART_MspDeInit) for HAL_UART_MspDeInit
+    stm32f4xx_hal_uart.o(i.HAL_UART_IRQHandler) refers to stm32f4xx_hal_uart.o(i.UART_Receive_IT) for UART_Receive_IT
+    stm32f4xx_hal_uart.o(i.HAL_UART_IRQHandler) refers to stm32f4xx_hal_uart.o(i.UART_EndRxTransfer) for UART_EndRxTransfer
+    stm32f4xx_hal_uart.o(i.HAL_UART_IRQHandler) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Abort_IT) for HAL_DMA_Abort_IT
+    stm32f4xx_hal_uart.o(i.HAL_UART_IRQHandler) refers to stm32f4xx_hal_uart.o(i.HAL_UART_ErrorCallback) for HAL_UART_ErrorCallback
+    stm32f4xx_hal_uart.o(i.HAL_UART_IRQHandler) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Abort) for HAL_DMA_Abort
+    stm32f4xx_hal_uart.o(i.HAL_UART_IRQHandler) refers to stm32f4xx_hal_uart.o(i.HAL_UARTEx_RxEventCallback) for HAL_UARTEx_RxEventCallback
+    stm32f4xx_hal_uart.o(i.HAL_UART_IRQHandler) refers to stm32f4xx_hal_uart.o(i.HAL_UART_TxCpltCallback) for HAL_UART_TxCpltCallback
+    stm32f4xx_hal_uart.o(i.HAL_UART_IRQHandler) refers to stm32f4xx_hal_uart.o(i.UART_DMAAbortOnError) for UART_DMAAbortOnError
+    stm32f4xx_hal_uart.o(i.HAL_UART_Init) refers to stm32f4xx_hal_msp.o(i.HAL_UART_MspInit) for HAL_UART_MspInit
+    stm32f4xx_hal_uart.o(i.HAL_UART_Init) refers to stm32f4xx_hal_uart.o(i.UART_SetConfig) for UART_SetConfig
+    stm32f4xx_hal_uart.o(i.HAL_UART_Receive) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_uart.o(i.HAL_UART_Receive) refers to stm32f4xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout) for UART_WaitOnFlagUntilTimeout
+    stm32f4xx_hal_uart.o(i.HAL_UART_Receive_DMA) refers to stm32f4xx_hal_uart.o(i.UART_Start_Receive_DMA) for UART_Start_Receive_DMA
+    stm32f4xx_hal_uart.o(i.HAL_UART_Receive_IT) refers to stm32f4xx_hal_uart.o(i.UART_Start_Receive_IT) for UART_Start_Receive_IT
+    stm32f4xx_hal_uart.o(i.HAL_UART_Transmit) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_uart.o(i.HAL_UART_Transmit) refers to stm32f4xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout) for UART_WaitOnFlagUntilTimeout
+    stm32f4xx_hal_uart.o(i.HAL_UART_Transmit_DMA) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Start_IT) for HAL_DMA_Start_IT
+    stm32f4xx_hal_uart.o(i.HAL_UART_Transmit_DMA) refers to stm32f4xx_hal_uart.o(i.UART_DMATransmitCplt) for UART_DMATransmitCplt
+    stm32f4xx_hal_uart.o(i.HAL_UART_Transmit_DMA) refers to stm32f4xx_hal_uart.o(i.UART_DMATxHalfCplt) for UART_DMATxHalfCplt
+    stm32f4xx_hal_uart.o(i.HAL_UART_Transmit_DMA) refers to stm32f4xx_hal_uart.o(i.UART_DMAError) for UART_DMAError
+    stm32f4xx_hal_uart.o(i.UART_DMAAbortOnError) refers to stm32f4xx_hal_uart.o(i.HAL_UART_ErrorCallback) for HAL_UART_ErrorCallback
+    stm32f4xx_hal_uart.o(i.UART_DMAError) refers to stm32f4xx_hal_uart.o(i.UART_EndTxTransfer) for UART_EndTxTransfer
+    stm32f4xx_hal_uart.o(i.UART_DMAError) refers to stm32f4xx_hal_uart.o(i.UART_EndRxTransfer) for UART_EndRxTransfer
+    stm32f4xx_hal_uart.o(i.UART_DMAError) refers to stm32f4xx_hal_uart.o(i.HAL_UART_ErrorCallback) for HAL_UART_ErrorCallback
+    stm32f4xx_hal_uart.o(i.UART_DMAReceiveCplt) refers to stm32f4xx_hal_uart.o(i.HAL_UART_RxCpltCallback) for HAL_UART_RxCpltCallback
+    stm32f4xx_hal_uart.o(i.UART_DMAReceiveCplt) refers to stm32f4xx_hal_uart.o(i.HAL_UARTEx_RxEventCallback) for HAL_UARTEx_RxEventCallback
+    stm32f4xx_hal_uart.o(i.UART_DMARxAbortCallback) refers to stm32f4xx_hal_uart.o(i.HAL_UART_AbortCpltCallback) for HAL_UART_AbortCpltCallback
+    stm32f4xx_hal_uart.o(i.UART_DMARxHalfCplt) refers to stm32f4xx_hal_uart.o(i.HAL_UART_RxHalfCpltCallback) for HAL_UART_RxHalfCpltCallback
+    stm32f4xx_hal_uart.o(i.UART_DMARxHalfCplt) refers to stm32f4xx_hal_uart.o(i.HAL_UARTEx_RxEventCallback) for HAL_UARTEx_RxEventCallback
+    stm32f4xx_hal_uart.o(i.UART_DMARxOnlyAbortCallback) refers to stm32f4xx_hal_uart.o(i.HAL_UART_AbortReceiveCpltCallback) for HAL_UART_AbortReceiveCpltCallback
+    stm32f4xx_hal_uart.o(i.UART_DMATransmitCplt) refers to stm32f4xx_hal_uart.o(i.HAL_UART_TxCpltCallback) for HAL_UART_TxCpltCallback
+    stm32f4xx_hal_uart.o(i.UART_DMATxAbortCallback) refers to stm32f4xx_hal_uart.o(i.HAL_UART_AbortCpltCallback) for HAL_UART_AbortCpltCallback
+    stm32f4xx_hal_uart.o(i.UART_DMATxHalfCplt) refers to stm32f4xx_hal_uart.o(i.HAL_UART_TxHalfCpltCallback) for HAL_UART_TxHalfCpltCallback
+    stm32f4xx_hal_uart.o(i.UART_DMATxOnlyAbortCallback) refers to stm32f4xx_hal_uart.o(i.HAL_UART_AbortTransmitCpltCallback) for HAL_UART_AbortTransmitCpltCallback
+    stm32f4xx_hal_uart.o(i.UART_Receive_IT) refers to stm32f4xx_hal_uart.o(i.HAL_UART_RxCpltCallback) for HAL_UART_RxCpltCallback
+    stm32f4xx_hal_uart.o(i.UART_Receive_IT) refers to stm32f4xx_hal_uart.o(i.HAL_UARTEx_RxEventCallback) for HAL_UARTEx_RxEventCallback
+    stm32f4xx_hal_uart.o(i.UART_SetConfig) refers to stm32f4xx_hal_rcc.o(i.HAL_RCC_GetPCLK2Freq) for HAL_RCC_GetPCLK2Freq
+    stm32f4xx_hal_uart.o(i.UART_SetConfig) refers to stm32f4xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq) for HAL_RCC_GetPCLK1Freq
+    stm32f4xx_hal_uart.o(i.UART_SetConfig) refers to uldiv.o(.text) for __aeabi_uldivmod
+    stm32f4xx_hal_uart.o(i.UART_Start_Receive_DMA) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Start_IT) for HAL_DMA_Start_IT
+    stm32f4xx_hal_uart.o(i.UART_Start_Receive_DMA) refers to stm32f4xx_hal_uart.o(i.UART_DMAReceiveCplt) for UART_DMAReceiveCplt
+    stm32f4xx_hal_uart.o(i.UART_Start_Receive_DMA) refers to stm32f4xx_hal_uart.o(i.UART_DMARxHalfCplt) for UART_DMARxHalfCplt
+    stm32f4xx_hal_uart.o(i.UART_Start_Receive_DMA) refers to stm32f4xx_hal_uart.o(i.UART_DMAError) for UART_DMAError
+    stm32f4xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    system_stm32f4xx.o(i.SystemCoreClockUpdate) refers to system_stm32f4xx.o(.data) for .data
+    system_stm32f4xx.o(i.SystemCoreClockUpdate) refers to system_stm32f4xx.o(.constdata) for .constdata
+    loopback.o(i.loopback_tcpc) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    loopback.o(i.loopback_tcpc) refers to printf8.o(i.__0printf$8) for __2printf
+    loopback.o(i.loopback_tcpc) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    loopback.o(i.loopback_tcpc) refers to w5500.o(i.getSn_RX_RSR) for getSn_RX_RSR
+    loopback.o(i.loopback_tcpc) refers to socket.o(i.recv) for recv
+    loopback.o(i.loopback_tcpc) refers to socket.o(i.send) for send
+    loopback.o(i.loopback_tcpc) refers to socket.o(i.close) for close
+    loopback.o(i.loopback_tcpc) refers to socket.o(i.disconnect) for disconnect
+    loopback.o(i.loopback_tcpc) refers to socket.o(i.connect) for connect
+    loopback.o(i.loopback_tcpc) refers to socket.o(i.socket) for socket
+    loopback.o(i.loopback_tcpc) refers to loopback.o(.data) for .data
+    loopback.o(i.loopback_tcps) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    loopback.o(i.loopback_tcps) refers to w5500.o(i.WIZCHIP_READ_BUF) for WIZCHIP_READ_BUF
+    loopback.o(i.loopback_tcps) refers to printf8.o(i.__0printf$8) for __2printf
+    loopback.o(i.loopback_tcps) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    loopback.o(i.loopback_tcps) refers to w5500.o(i.getSn_RX_RSR) for getSn_RX_RSR
+    loopback.o(i.loopback_tcps) refers to socket.o(i.recv) for recv
+    loopback.o(i.loopback_tcps) refers to socket.o(i.send) for send
+    loopback.o(i.loopback_tcps) refers to socket.o(i.close) for close
+    loopback.o(i.loopback_tcps) refers to socket.o(i.disconnect) for disconnect
+    loopback.o(i.loopback_tcps) refers to socket.o(i.listen) for listen
+    loopback.o(i.loopback_tcps) refers to socket.o(i.socket) for socket
+    loopback.o(i.loopback_udps) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    loopback.o(i.loopback_udps) refers to w5500.o(i.getSn_RX_RSR) for getSn_RX_RSR
+    loopback.o(i.loopback_udps) refers to socket.o(i.recvfrom) for recvfrom
+    loopback.o(i.loopback_udps) refers to printf8.o(i.__0printf$8) for __2printf
+    loopback.o(i.loopback_udps) refers to socket.o(i.sendto) for sendto
+    loopback.o(i.loopback_udps) refers to socket.o(i.socket) for socket
+    w5500.o(i.WIZCHIP_READ) refers to wizchip_conf.o(.data) for WIZCHIP
+    w5500.o(i.WIZCHIP_READ_BUF) refers to wizchip_conf.o(.data) for WIZCHIP
+    w5500.o(i.WIZCHIP_WRITE) refers to wizchip_conf.o(.data) for WIZCHIP
+    w5500.o(i.WIZCHIP_WRITE_BUF) refers to wizchip_conf.o(.data) for WIZCHIP
+    w5500.o(i.getSn_RX_RSR) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    w5500.o(i.getSn_TX_FSR) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    w5500.o(i.wiz_recv_data) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    w5500.o(i.wiz_recv_data) refers to w5500.o(i.WIZCHIP_READ_BUF) for WIZCHIP_READ_BUF
+    w5500.o(i.wiz_recv_data) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    w5500.o(i.wiz_recv_ignore) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    w5500.o(i.wiz_recv_ignore) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    w5500.o(i.wiz_send_data) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    w5500.o(i.wiz_send_data) refers to w5500.o(i.WIZCHIP_WRITE_BUF) for WIZCHIP_WRITE_BUF
+    w5500.o(i.wiz_send_data) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(i.close) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(i.close) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(i.close) refers to socket.o(.data) for .data
+    socket.o(i.close) refers to socket.o(.bss) for .bss
+    socket.o(i.connect) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(i.connect) refers to w5500.o(i.WIZCHIP_WRITE_BUF) for WIZCHIP_WRITE_BUF
+    socket.o(i.connect) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(i.connect) refers to socket.o(.data) for .data
+    socket.o(i.ctlsocket) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(i.ctlsocket) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(i.ctlsocket) refers to socket.o(.data) for .data
+    socket.o(i.disconnect) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(i.disconnect) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(i.disconnect) refers to socket.o(i.close) for close
+    socket.o(i.disconnect) refers to socket.o(.data) for .data
+    socket.o(i.getsockopt) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(i.getsockopt) refers to w5500.o(i.WIZCHIP_READ_BUF) for WIZCHIP_READ_BUF
+    socket.o(i.getsockopt) refers to w5500.o(i.getSn_TX_FSR) for getSn_TX_FSR
+    socket.o(i.getsockopt) refers to w5500.o(i.getSn_RX_RSR) for getSn_RX_RSR
+    socket.o(i.getsockopt) refers to socket.o(.bss) for .bss
+    socket.o(i.getsockopt) refers to socket.o(.data) for .data
+    socket.o(i.listen) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(i.listen) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(i.listen) refers to socket.o(i.close) for close
+    socket.o(i.recv) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(i.recv) refers to w5500.o(i.getSn_RX_RSR) for getSn_RX_RSR
+    socket.o(i.recv) refers to w5500.o(i.getSn_TX_FSR) for getSn_TX_FSR
+    socket.o(i.recv) refers to socket.o(i.close) for close
+    socket.o(i.recv) refers to w5500.o(i.wiz_recv_data) for wiz_recv_data
+    socket.o(i.recv) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(i.recv) refers to socket.o(.data) for .data
+    socket.o(i.recvfrom) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(i.recvfrom) refers to w5500.o(i.getSn_RX_RSR) for getSn_RX_RSR
+    socket.o(i.recvfrom) refers to w5500.o(i.wiz_recv_ignore) for wiz_recv_ignore
+    socket.o(i.recvfrom) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(i.recvfrom) refers to w5500.o(i.wiz_recv_data) for wiz_recv_data
+    socket.o(i.recvfrom) refers to socket.o(i.close) for close
+    socket.o(i.recvfrom) refers to socket.o(.bss) for .bss
+    socket.o(i.recvfrom) refers to socket.o(.data) for .data
+    socket.o(i.send) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(i.send) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(i.send) refers to w5500.o(i.getSn_TX_FSR) for getSn_TX_FSR
+    socket.o(i.send) refers to socket.o(i.close) for close
+    socket.o(i.send) refers to w5500.o(i.wiz_send_data) for wiz_send_data
+    socket.o(i.send) refers to socket.o(.data) for .data
+    socket.o(i.sendto) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(i.sendto) refers to w5500.o(i.WIZCHIP_WRITE_BUF) for WIZCHIP_WRITE_BUF
+    socket.o(i.sendto) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(i.sendto) refers to w5500.o(i.getSn_TX_FSR) for getSn_TX_FSR
+    socket.o(i.sendto) refers to w5500.o(i.wiz_send_data) for wiz_send_data
+    socket.o(i.sendto) refers to socket.o(.data) for .data
+    socket.o(i.setsockopt) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(i.setsockopt) refers to w5500.o(i.WIZCHIP_WRITE_BUF) for WIZCHIP_WRITE_BUF
+    socket.o(i.setsockopt) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(i.socket) refers to w5500.o(i.WIZCHIP_READ_BUF) for WIZCHIP_READ_BUF
+    socket.o(i.socket) refers to socket.o(i.close) for close
+    socket.o(i.socket) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    socket.o(i.socket) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    socket.o(i.socket) refers to socket.o(.data) for .data
+    socket.o(i.socket) refers to socket.o(.bss) for .bss
+    wizchip_conf.o(i.ctlnetwork) refers to wizchip_conf.o(i.wizchip_setnetinfo) for wizchip_setnetinfo
+    wizchip_conf.o(i.ctlnetwork) refers to wizchip_conf.o(i.wizchip_getnetinfo) for wizchip_getnetinfo
+    wizchip_conf.o(i.ctlnetwork) refers to wizchip_conf.o(i.wizchip_setnetmode) for wizchip_setnetmode
+    wizchip_conf.o(i.ctlnetwork) refers to wizchip_conf.o(i.wizchip_getnetmode) for wizchip_getnetmode
+    wizchip_conf.o(i.ctlnetwork) refers to wizchip_conf.o(i.wizchip_settimeout) for wizchip_settimeout
+    wizchip_conf.o(i.ctlnetwork) refers to wizchip_conf.o(i.wizchip_gettimeout) for wizchip_gettimeout
+    wizchip_conf.o(i.ctlwizchip) refers to wizchip_conf.o(i.wizchip_sw_reset) for wizchip_sw_reset
+    wizchip_conf.o(i.ctlwizchip) refers to wizchip_conf.o(i.wizchip_init) for wizchip_init
+    wizchip_conf.o(i.ctlwizchip) refers to wizchip_conf.o(i.wizchip_clrinterrupt) for wizchip_clrinterrupt
+    wizchip_conf.o(i.ctlwizchip) refers to wizchip_conf.o(i.wizchip_getinterrupt) for wizchip_getinterrupt
+    wizchip_conf.o(i.ctlwizchip) refers to wizchip_conf.o(i.wizchip_setinterruptmask) for wizchip_setinterruptmask
+    wizchip_conf.o(i.ctlwizchip) refers to wizchip_conf.o(i.wizchip_getinterruptmask) for wizchip_getinterruptmask
+    wizchip_conf.o(i.ctlwizchip) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    wizchip_conf.o(i.ctlwizchip) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(i.ctlwizchip) refers to wizchip_conf.o(i.wizphy_reset) for wizphy_reset
+    wizchip_conf.o(i.ctlwizchip) refers to wizchip_conf.o(i.wizphy_setphyconf) for wizphy_setphyconf
+    wizchip_conf.o(i.ctlwizchip) refers to wizchip_conf.o(i.wizphy_getphyconf) for wizphy_getphyconf
+    wizchip_conf.o(i.ctlwizchip) refers to wizchip_conf.o(i.wizphy_setphypmode) for wizphy_setphypmode
+    wizchip_conf.o(i.ctlwizchip) refers to wizchip_conf.o(i.wizphy_getphypmode) for wizphy_getphypmode
+    wizchip_conf.o(i.ctlwizchip) refers to wizchip_conf.o(i.wizphy_getphylink) for wizphy_getphylink
+    wizchip_conf.o(i.ctlwizchip) refers to wizchip_conf.o(.data) for .data
+    wizchip_conf.o(i.reg_wizchip_bus_cbfunc) refers to wizchip_conf.o(.data) for .data
+    wizchip_conf.o(i.reg_wizchip_bus_cbfunc) refers to wizchip_conf.o(i.wizchip_bus_readdata) for wizchip_bus_readdata
+    wizchip_conf.o(i.reg_wizchip_bus_cbfunc) refers to wizchip_conf.o(i.wizchip_bus_writedata) for wizchip_bus_writedata
+    wizchip_conf.o(i.reg_wizchip_cris_cbfunc) refers to wizchip_conf.o(.data) for .data
+    wizchip_conf.o(i.reg_wizchip_cris_cbfunc) refers to wizchip_conf.o(i.wizchip_cris_enter) for wizchip_cris_enter
+    wizchip_conf.o(i.reg_wizchip_cris_cbfunc) refers to wizchip_conf.o(i.wizchip_cris_exit) for wizchip_cris_exit
+    wizchip_conf.o(i.reg_wizchip_cs_cbfunc) refers to wizchip_conf.o(.data) for .data
+    wizchip_conf.o(i.reg_wizchip_cs_cbfunc) refers to wizchip_conf.o(i.wizchip_cs_select) for wizchip_cs_select
+    wizchip_conf.o(i.reg_wizchip_cs_cbfunc) refers to wizchip_conf.o(i.wizchip_cs_deselect) for wizchip_cs_deselect
+    wizchip_conf.o(i.reg_wizchip_spi_cbfunc) refers to wizchip_conf.o(.data) for .data
+    wizchip_conf.o(i.reg_wizchip_spi_cbfunc) refers to wizchip_conf.o(i.wizchip_spi_readbyte) for wizchip_spi_readbyte
+    wizchip_conf.o(i.reg_wizchip_spi_cbfunc) refers to wizchip_conf.o(i.wizchip_spi_writebyte) for wizchip_spi_writebyte
+    wizchip_conf.o(i.reg_wizchip_spiburst_cbfunc) refers to wizchip_conf.o(.data) for .data
+    wizchip_conf.o(i.reg_wizchip_spiburst_cbfunc) refers to wizchip_conf.o(i.wizchip_spi_readburst) for wizchip_spi_readburst
+    wizchip_conf.o(i.reg_wizchip_spiburst_cbfunc) refers to wizchip_conf.o(i.wizchip_spi_writeburst) for wizchip_spi_writeburst
+    wizchip_conf.o(i.wizchip_clrinterrupt) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    wizchip_conf.o(i.wizchip_getinterrupt) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(i.wizchip_getinterruptmask) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(i.wizchip_getnetinfo) refers to w5500.o(i.WIZCHIP_READ_BUF) for WIZCHIP_READ_BUF
+    wizchip_conf.o(i.wizchip_getnetinfo) refers to wizchip_conf.o(.data) for .data
+    wizchip_conf.o(i.wizchip_getnetmode) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(i.wizchip_gettimeout) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(i.wizchip_init) refers to wizchip_conf.o(i.wizchip_sw_reset) for wizchip_sw_reset
+    wizchip_conf.o(i.wizchip_init) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    wizchip_conf.o(i.wizchip_setinterruptmask) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    wizchip_conf.o(i.wizchip_setnetinfo) refers to w5500.o(i.WIZCHIP_WRITE_BUF) for WIZCHIP_WRITE_BUF
+    wizchip_conf.o(i.wizchip_setnetinfo) refers to wizchip_conf.o(.data) for .data
+    wizchip_conf.o(i.wizchip_setnetmode) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(i.wizchip_setnetmode) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    wizchip_conf.o(i.wizchip_settimeout) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    wizchip_conf.o(i.wizchip_sw_reset) refers to w5500.o(i.WIZCHIP_READ_BUF) for WIZCHIP_READ_BUF
+    wizchip_conf.o(i.wizchip_sw_reset) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    wizchip_conf.o(i.wizchip_sw_reset) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(i.wizchip_sw_reset) refers to w5500.o(i.WIZCHIP_WRITE_BUF) for WIZCHIP_WRITE_BUF
+    wizchip_conf.o(i.wizphy_getphyconf) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(i.wizphy_getphylink) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(i.wizphy_getphypmode) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(i.wizphy_getphystat) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(i.wizphy_reset) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(i.wizphy_reset) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    wizchip_conf.o(i.wizphy_setphyconf) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    wizchip_conf.o(i.wizphy_setphyconf) refers to wizchip_conf.o(i.wizphy_reset) for wizphy_reset
+    wizchip_conf.o(i.wizphy_setphypmode) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    wizchip_conf.o(i.wizphy_setphypmode) refers to w5500.o(i.WIZCHIP_WRITE) for WIZCHIP_WRITE
+    wizchip_conf.o(i.wizphy_setphypmode) refers to wizchip_conf.o(i.wizphy_reset) for wizphy_reset
+    wizchip_conf.o(.data) refers to wizchip_conf.o(i.wizchip_cris_enter) for wizchip_cris_enter
+    wizchip_conf.o(.data) refers to wizchip_conf.o(i.wizchip_cris_exit) for wizchip_cris_exit
+    wizchip_conf.o(.data) refers to wizchip_conf.o(i.wizchip_cs_select) for wizchip_cs_select
+    wizchip_conf.o(.data) refers to wizchip_conf.o(i.wizchip_cs_deselect) for wizchip_cs_deselect
+    wizchip_conf.o(.data) refers to wizchip_conf.o(i.wizchip_bus_readdata) for wizchip_bus_readdata
+    wizchip_conf.o(.data) refers to wizchip_conf.o(i.wizchip_bus_writedata) for wizchip_bus_writedata
+    w5x00_spi.o(i.network_initialize) refers to wizchip_conf.o(i.ctlnetwork) for ctlnetwork
+    w5x00_spi.o(i.print_network_information) refers to wizchip_conf.o(i.ctlnetwork) for ctlnetwork
+    w5x00_spi.o(i.print_network_information) refers to wizchip_conf.o(i.ctlwizchip) for ctlwizchip
+    w5x00_spi.o(i.print_network_information) refers to printf8.o(i.__0printf$8) for __2printf
+    w5x00_spi.o(i.print_network_information) refers to w5x00_spi.o(.conststring) for .conststring
+    w5x00_spi.o(i.wizchip_check) refers to w5500.o(i.WIZCHIP_READ) for WIZCHIP_READ
+    w5x00_spi.o(i.wizchip_check) refers to printf8.o(i.__0printf$8) for __2printf
+    w5x00_spi.o(i.wizchip_cris_initialize) refers to wizchip_conf.o(i.reg_wizchip_cris_cbfunc) for reg_wizchip_cris_cbfunc
+    w5x00_spi.o(i.wizchip_cris_initialize) refers to w5x00_spi.o(i.wizchip_critical_section_unlock) for wizchip_critical_section_unlock
+    w5x00_spi.o(i.wizchip_cris_initialize) refers to w5x00_spi.o(i.wizchip_critical_section_lock) for wizchip_critical_section_lock
+    w5x00_spi.o(i.wizchip_deselect) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
+    w5x00_spi.o(i.wizchip_initialize) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
+    w5x00_spi.o(i.wizchip_initialize) refers to wizchip_conf.o(i.reg_wizchip_cs_cbfunc) for reg_wizchip_cs_cbfunc
+    w5x00_spi.o(i.wizchip_initialize) refers to wizchip_conf.o(i.reg_wizchip_spi_cbfunc) for reg_wizchip_spi_cbfunc
+    w5x00_spi.o(i.wizchip_initialize) refers to wizchip_conf.o(i.reg_wizchip_spiburst_cbfunc) for reg_wizchip_spiburst_cbfunc
+    w5x00_spi.o(i.wizchip_initialize) refers to wizchip_conf.o(i.ctlwizchip) for ctlwizchip
+    w5x00_spi.o(i.wizchip_initialize) refers to printf8.o(i.__0printf$8) for __2printf
+    w5x00_spi.o(i.wizchip_initialize) refers to w5x00_spi.o(i.wizchip_deselect) for wizchip_deselect
+    w5x00_spi.o(i.wizchip_initialize) refers to w5x00_spi.o(i.wizchip_select) for wizchip_select
+    w5x00_spi.o(i.wizchip_initialize) refers to w5x00_spi.o(i.wizchip_write) for wizchip_write
+    w5x00_spi.o(i.wizchip_initialize) refers to w5x00_spi.o(i.wizchip_read) for wizchip_read
+    w5x00_spi.o(i.wizchip_initialize) refers to w5x00_spi.o(i.wizchip_write_burst) for wizchip_write_burst
+    w5x00_spi.o(i.wizchip_initialize) refers to w5x00_spi.o(i.wizchip_read_burst) for wizchip_read_burst
+    w5x00_spi.o(i.wizchip_initialize) refers to w5x00_spi.o(.constdata) for .constdata
+    w5x00_spi.o(i.wizchip_read) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_GetState) for HAL_SPI_GetState
+    w5x00_spi.o(i.wizchip_read) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive) for HAL_SPI_TransmitReceive
+    w5x00_spi.o(i.wizchip_read) refers to main.o(.bss) for hspi1
+    w5x00_spi.o(i.wizchip_read_burst) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_Receive_DMA) for HAL_SPI_Receive_DMA
+    w5x00_spi.o(i.wizchip_read_burst) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_GetState) for HAL_DMA_GetState
+    w5x00_spi.o(i.wizchip_read_burst) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_GetState) for HAL_SPI_GetState
+    w5x00_spi.o(i.wizchip_read_burst) refers to main.o(.bss) for hspi1
+    w5x00_spi.o(i.wizchip_select) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
+    w5x00_spi.o(i.wizchip_write) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_GetState) for HAL_SPI_GetState
+    w5x00_spi.o(i.wizchip_write) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive) for HAL_SPI_TransmitReceive
+    w5x00_spi.o(i.wizchip_write) refers to main.o(.bss) for hspi1
+    w5x00_spi.o(i.wizchip_write_burst) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_Transmit_DMA) for HAL_SPI_Transmit_DMA
+    w5x00_spi.o(i.wizchip_write_burst) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_GetState) for HAL_DMA_GetState
+    w5x00_spi.o(i.wizchip_write_burst) refers to stm32f4xx_hal_spi.o(i.HAL_SPI_GetState) for HAL_SPI_GetState
+    w5x00_spi.o(i.wizchip_write_burst) refers to main.o(.bss) for hspi1
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000F) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$00000011) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry12b.o(.ARM.Collect$$$$0000000E) for __rt_lib_shutdown_fini
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    fwrite.o(i.fwrite) refers to main.o(i.fputc) for fputc
+    fread.o(i.fread) refers to fgetc.o(.text) for fgetc
+    fwrite_e.o(.text) refers to main.o(i.fputc) for fputc
+    uldiv.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    uldiv.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    rand.o(.text) refers to rand.o(.data) for .data
+    printfb.o(i.__0fprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0fprintf$bare) refers to main.o(i.fputc) for fputc
+    printfb.o(i.__0printf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0printf$bare) refers to main.o(i.fputc) for fputc
+    printfb.o(i.__0printf$bare) refers to stdout.o(.data) for __stdout
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printfb.o(i.__0vfprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vfprintf$bare) refers to main.o(i.fputc) for fputc
+    printfb.o(i.__0vprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vprintf$bare) refers to main.o(i.fputc) for fputc
+    printfb.o(i.__0vprintf$bare) refers to stdout.o(.data) for __stdout
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printf0.o(i.__0fprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0fprintf$0) refers to main.o(i.fputc) for fputc
+    printf0.o(i.__0printf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0printf$0) refers to main.o(i.fputc) for fputc
+    printf0.o(i.__0printf$0) refers to stdout.o(.data) for __stdout
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf0.o(i.__0vfprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vfprintf$0) refers to main.o(i.fputc) for fputc
+    printf0.o(i.__0vprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vprintf$0) refers to main.o(i.fputc) for fputc
+    printf0.o(i.__0vprintf$0) refers to stdout.o(.data) for __stdout
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf1.o(i.__0fprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0fprintf$1) refers to main.o(i.fputc) for fputc
+    printf1.o(i.__0printf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0printf$1) refers to main.o(i.fputc) for fputc
+    printf1.o(i.__0printf$1) refers to stdout.o(.data) for __stdout
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i.__0vfprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vfprintf$1) refers to main.o(i.fputc) for fputc
+    printf1.o(i.__0vprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vprintf$1) refers to main.o(i.fputc) for fputc
+    printf1.o(i.__0vprintf$1) refers to stdout.o(.data) for __stdout
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf2.o(i.__0fprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0fprintf$2) refers to main.o(i.fputc) for fputc
+    printf2.o(i.__0printf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0printf$2) refers to main.o(i.fputc) for fputc
+    printf2.o(i.__0printf$2) refers to stdout.o(.data) for __stdout
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf2.o(i.__0vfprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vfprintf$2) refers to main.o(i.fputc) for fputc
+    printf2.o(i.__0vprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vprintf$2) refers to main.o(i.fputc) for fputc
+    printf2.o(i.__0vprintf$2) refers to stdout.o(.data) for __stdout
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf3.o(i.__0fprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0fprintf$3) refers to main.o(i.fputc) for fputc
+    printf3.o(i.__0printf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0printf$3) refers to main.o(i.fputc) for fputc
+    printf3.o(i.__0printf$3) refers to stdout.o(.data) for __stdout
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i.__0vfprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vfprintf$3) refers to main.o(i.fputc) for fputc
+    printf3.o(i.__0vprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vprintf$3) refers to main.o(i.fputc) for fputc
+    printf3.o(i.__0vprintf$3) refers to stdout.o(.data) for __stdout
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf4.o(i.__0fprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0fprintf$4) refers to main.o(i.fputc) for fputc
+    printf4.o(i.__0printf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0printf$4) refers to main.o(i.fputc) for fputc
+    printf4.o(i.__0printf$4) refers to stdout.o(.data) for __stdout
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i.__0vfprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vfprintf$4) refers to main.o(i.fputc) for fputc
+    printf4.o(i.__0vprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vprintf$4) refers to main.o(i.fputc) for fputc
+    printf4.o(i.__0vprintf$4) refers to stdout.o(.data) for __stdout
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf5.o(i.__0fprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0fprintf$5) refers to main.o(i.fputc) for fputc
+    printf5.o(i.__0printf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0printf$5) refers to main.o(i.fputc) for fputc
+    printf5.o(i.__0printf$5) refers to stdout.o(.data) for __stdout
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i.__0vfprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vfprintf$5) refers to main.o(i.fputc) for fputc
+    printf5.o(i.__0vprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vprintf$5) refers to main.o(i.fputc) for fputc
+    printf5.o(i.__0vprintf$5) refers to stdout.o(.data) for __stdout
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf6.o(i.__0fprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0fprintf$6) refers to main.o(i.fputc) for fputc
+    printf6.o(i.__0printf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0printf$6) refers to main.o(i.fputc) for fputc
+    printf6.o(i.__0printf$6) refers to stdout.o(.data) for __stdout
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i.__0vfprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vfprintf$6) refers to main.o(i.fputc) for fputc
+    printf6.o(i.__0vprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vprintf$6) refers to main.o(i.fputc) for fputc
+    printf6.o(i.__0vprintf$6) refers to stdout.o(.data) for __stdout
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_pre_padding) for _printf_pre_padding
+    printf6.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_post_padding) for _printf_post_padding
+    printf7.o(i.__0fprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0fprintf$7) refers to main.o(i.fputc) for fputc
+    printf7.o(i.__0printf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0printf$7) refers to main.o(i.fputc) for fputc
+    printf7.o(i.__0printf$7) refers to stdout.o(.data) for __stdout
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i.__0vfprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vfprintf$7) refers to main.o(i.fputc) for fputc
+    printf7.o(i.__0vprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vprintf$7) refers to main.o(i.fputc) for fputc
+    printf7.o(i.__0vprintf$7) refers to stdout.o(.data) for __stdout
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_pre_padding) for _printf_pre_padding
+    printf7.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_post_padding) for _printf_post_padding
+    printf8.o(i.__0fprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0fprintf$8) refers to main.o(i.fputc) for fputc
+    printf8.o(i.__0printf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0printf$8) refers to main.o(i.fputc) for fputc
+    printf8.o(i.__0printf$8) refers to stdout.o(.data) for __stdout
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i.__0vfprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vfprintf$8) refers to main.o(i.fputc) for fputc
+    printf8.o(i.__0vprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vprintf$8) refers to main.o(i.fputc) for fputc
+    printf8.o(i.__0vprintf$8) refers to stdout.o(.data) for __stdout
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_pre_padding) for _printf_pre_padding
+    printf8.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i.__0fprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0fprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0fprintf) refers to main.o(i.fputc) for fputc
+    printfa.o(i.__0printf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0printf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0printf) refers to main.o(i.fputc) for fputc
+    printfa.o(i.__0printf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0snprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0snprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0snprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0sprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0sprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0sprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i.__0vfprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vfprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vfprintf) refers to main.o(i.fputc) for fputc
+    printfa.o(i.__0vprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vprintf) refers to main.o(i.fputc) for fputc
+    printfa.o(i.__0vprintf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0vsnprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0vsprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i._fp_digits) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._fp_digits) refers to dmul.o(.text) for __aeabi_dmul
+    printfa.o(i._fp_digits) refers to ddiv.o(.text) for __aeabi_ddiv
+    printfa.o(i._fp_digits) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    printfa.o(i._fp_digits) refers to dadd.o(.text) for __aeabi_dadd
+    printfa.o(i._fp_digits) refers to dfixul.o(.text) for __aeabi_d2ulz
+    printfa.o(i._fp_digits) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_pre_padding) for _printf_pre_padding
+    printfa.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i._printf_core) refers to printfa.o(i._fp_digits) for _fp_digits
+    printfa.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printfa.o(i._printf_post_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_pre_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._snputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._sputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    malloc.o(i.free) refers to mvars.o(.data) for __microlib_freelist
+    malloc.o(i.malloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    malloc.o(i.malloc) refers to mvars.o(.data) for __microlib_freelist
+    malloc.o(i.malloc) refers to startup_stm32f411xe.o(HEAP) for __heap_base
+    mallocr.o(i.__free$realloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocr.o(i.__malloc$realloc) refers to mallocr.o(i.internal_alloc) for internal_alloc
+    mallocr.o(i.__malloc$realloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    mallocr.o(i.__malloc$realloc) refers to startup_stm32f411xe.o(HEAP) for __heap_base
+    mallocr.o(i.__malloc$realloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocr.o(i.internal_alloc) refers to memcpya.o(.text) for __aeabi_memcpy
+    mallocr.o(i.internal_alloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocr.o(i.realloc) refers to mallocr.o(i.__free$realloc) for __free$realloc
+    mallocr.o(i.realloc) refers to mallocr.o(i.internal_alloc) for internal_alloc
+    mallocr.o(i.realloc) refers to mallocr.o(i.__malloc$realloc) for __malloc$realloc
+    mallocr.o(i.realloc) refers to mvars.o(.data) for __microlib_freelist
+    malloca.o(i.__aligned_malloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    malloca.o(i.__aligned_malloc) refers to mvars.o(.data) for __microlib_freelist
+    malloca.o(i.__aligned_malloc) refers to startup_stm32f411xe.o(HEAP) for __heap_base
+    malloca.o(i.__free$memalign) refers to mvars.o(.data) for __microlib_freelist
+    malloca.o(i.__malloc$memalign) refers to malloca.o(i.__aligned_malloc) for __aligned_malloc
+    mallocra.o(i.__aligned_malloc$realloc) refers to mallocra.o(i.internal_alloc) for internal_alloc
+    mallocra.o(i.__aligned_malloc$realloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    mallocra.o(i.__aligned_malloc$realloc) refers to startup_stm32f411xe.o(HEAP) for __heap_base
+    mallocra.o(i.__aligned_malloc$realloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocra.o(i.__free$realloc$memalign) refers to mvars.o(.data) for __microlib_freelist
+    mallocra.o(i.__malloc$realloc$memalign) refers to mallocra.o(i.__aligned_malloc$realloc) for __aligned_malloc$realloc
+    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.__free$realloc$memalign) for __free$realloc$memalign
+    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.internal_alloc) for internal_alloc
+    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.__malloc$realloc$memalign) for __malloc$realloc$memalign
+    mallocra.o(i.__realloc$memalign) refers to mvars.o(.data) for __microlib_freelist
+    mallocra.o(i.internal_alloc) refers to memcpya.o(.text) for __aeabi_memcpy
+    mallocra.o(i.internal_alloc) refers to mvars.o(.data) for __microlib_freelist
+    calloc.o(.text) refers to malloc.o(i.malloc) for malloc
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_stm32f411xe.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_stm32f411xe.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(i.main) for main
+    fgetc.o(.text) refers (Special) to iusesemig.o(.text) for __I$use$semihosting$fgetc
+    fgetc.o(.text) refers (Special) to semi.o(.text) for __semihosting_library_function
+    fgetc_u.o(.text) refers (Special) to iusesemig.o(.text) for __I$use$semihosting$fgetc
+    fgetc_u.o(.text) refers (Special) to semi.o(.text) for __semihosting_library_function
+    fgetc_u.o(.text) refers to fgetc_u.o(.data) for .data
+    fgetc_u.o(.data) refers (Special) to iusesemig.o(.text) for __I$use$semihosting$fgetc
+    fgetc_u.o(.data) refers (Special) to semi.o(.text) for __semihosting_library_function
+    fgetc_b.o(.text) refers (Special) to iusesemig.o(.text) for __I$use$semihosting$fgetc
+    fgetc_b.o(.text) refers (Special) to semi.o(.text) for __semihosting_library_function
+    fgetc_b.o(.text) refers to fgetc_b.o(.data) for .data
+    fgetc_b.o(.data) refers (Special) to iusesemig.o(.text) for __I$use$semihosting$fgetc
+    fgetc_b.o(.data) refers (Special) to semi.o(.text) for __semihosting_library_function
+    fgetc_ub.o(.text) refers (Special) to iusesemig.o(.text) for __I$use$semihosting$fgetc
+    fgetc_ub.o(.text) refers (Special) to semi.o(.text) for __semihosting_library_function
+    fgetc_ub.o(.text) refers to fgetc_ub.o(.data) for .data
+    fgetc_ub.o(.data) refers (Special) to iusesemig.o(.text) for __I$use$semihosting$fgetc
+    fgetc_ub.o(.data) refers (Special) to semi.o(.text) for __semihosting_library_function
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dfixul.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfixul.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing cipher.o(i.add_one_and_zeros_padding), (28 bytes).
+    Removing cipher.o(i.add_pkcs_padding), (24 bytes).
+    Removing cipher.o(i.add_zeros_and_len_padding), (34 bytes).
+    Removing cipher.o(i.add_zeros_padding), (14 bytes).
+    Removing cipher.o(i.get_no_padding), (20 bytes).
+    Removing cipher.o(i.get_one_and_zeros_padding), (120 bytes).
+    Removing cipher.o(i.get_pkcs_padding), (92 bytes).
+    Removing cipher.o(i.get_zeros_and_len_padding), (96 bytes).
+    Removing cipher.o(i.get_zeros_padding), (64 bytes).
+    Removing cipher.o(i.mbedtls_cipher_auth_decrypt), (184 bytes).
+    Removing cipher.o(i.mbedtls_cipher_auth_encrypt), (160 bytes).
+    Removing cipher.o(i.mbedtls_cipher_check_tag), (100 bytes).
+    Removing cipher.o(i.mbedtls_cipher_crypt), (80 bytes).
+    Removing cipher.o(i.mbedtls_cipher_finish), (228 bytes).
+    Removing cipher.o(i.mbedtls_cipher_free), (32 bytes).
+    Removing cipher.o(i.mbedtls_cipher_get_block_size), (10 bytes).
+    Removing cipher.o(i.mbedtls_cipher_info_from_string), (44 bytes).
+    Removing cipher.o(i.mbedtls_cipher_info_from_type), (32 bytes).
+    Removing cipher.o(i.mbedtls_cipher_info_from_values), (48 bytes).
+    Removing cipher.o(i.mbedtls_cipher_list), (48 bytes).
+    Removing cipher.o(i.mbedtls_cipher_reset), (20 bytes).
+    Removing cipher.o(i.mbedtls_cipher_set_iv), (88 bytes).
+    Removing cipher.o(i.mbedtls_cipher_set_padding_mode), (120 bytes).
+    Removing cipher.o(i.mbedtls_cipher_setkey), (72 bytes).
+    Removing cipher.o(i.mbedtls_cipher_setup), (52 bytes).
+    Removing cipher.o(i.mbedtls_cipher_update), (548 bytes).
+    Removing cipher.o(i.mbedtls_cipher_update_ad), (100 bytes).
+    Removing cipher.o(i.mbedtls_cipher_write_tag), (60 bytes).
+    Removing cipher.o(i.mbedtls_constant_time_memcmp), (26 bytes).
+    Removing cipher.o(.data), (4 bytes).
+    Removing ctr_drbg.o(i.block_cipher_df), (342 bytes).
+    Removing ctr_drbg.o(i.ctr_drbg_self_test_entropy), (32 bytes).
+    Removing ctr_drbg.o(i.ctr_drbg_update_internal), (132 bytes).
+    Removing ctr_drbg.o(i.mbedtls_ctr_drbg_free), (30 bytes).
+    Removing ctr_drbg.o(i.mbedtls_ctr_drbg_random), (12 bytes).
+    Removing ctr_drbg.o(i.mbedtls_ctr_drbg_random_with_add), (222 bytes).
+    Removing ctr_drbg.o(i.mbedtls_ctr_drbg_reseed), (6 bytes).
+    Removing ctr_drbg.o(i.mbedtls_ctr_drbg_reseed_internal), (162 bytes).
+    Removing ctr_drbg.o(i.mbedtls_ctr_drbg_seed), (106 bytes).
+    Removing ctr_drbg.o(i.mbedtls_ctr_drbg_self_test), (352 bytes).
+    Removing ctr_drbg.o(i.mbedtls_ctr_drbg_set_entropy_len), (4 bytes).
+    Removing ctr_drbg.o(i.mbedtls_ctr_drbg_set_nonce_len), (30 bytes).
+    Removing ctr_drbg.o(i.mbedtls_ctr_drbg_set_prediction_resistance), (4 bytes).
+    Removing ctr_drbg.o(i.mbedtls_ctr_drbg_set_reseed_interval), (4 bytes).
+    Removing ctr_drbg.o(i.mbedtls_ctr_drbg_update), (14 bytes).
+    Removing ctr_drbg.o(i.mbedtls_ctr_drbg_update_ret), (48 bytes).
+    Removing ctr_drbg.o(i.mbedtls_ctr_drbg_update_seed_file), (144 bytes).
+    Removing ctr_drbg.o(i.mbedtls_ctr_drbg_write_seed_file), (92 bytes).
+    Removing ctr_drbg.o(.constdata), (224 bytes).
+    Removing ctr_drbg.o(.data), (4 bytes).
+    Removing entropy.o(i.entropy_dummy_source), (22 bytes).
+    Removing entropy.o(i.entropy_gather_internal), (134 bytes).
+    Removing entropy.o(i.entropy_update), (112 bytes).
+    Removing entropy.o(i.mbedtls_entropy_add_source), (48 bytes).
+    Removing entropy.o(i.mbedtls_entropy_free), (32 bytes).
+    Removing entropy.o(i.mbedtls_entropy_func), (238 bytes).
+    Removing entropy.o(i.mbedtls_entropy_gather), (4 bytes).
+    Removing entropy.o(i.mbedtls_entropy_init), (72 bytes).
+    Removing entropy.o(i.mbedtls_entropy_self_test), (240 bytes).
+    Removing entropy.o(i.mbedtls_entropy_update_manual), (10 bytes).
+    Removing entropy.o(i.mbedtls_entropy_update_seed_file), (132 bytes).
+    Removing entropy.o(i.mbedtls_entropy_write_seed_file), (88 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_check_cert_usage), (136 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_check_curve), (32 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_check_sig_hash), (32 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_ciphersuite_uses_srv_cert), (30 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_alpn_protocols), (60 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_arc4_support), (12 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_ca_chain), (6 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_cbc_record_splitting), (12 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_cert_profile), (4 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_cert_req_ca_list), (12 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_ciphersuites), (10 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_ciphersuites_for_version), (14 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_curves), (4 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_dbg), (6 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_dh_param), (60 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_dh_param_ctx), (58 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_dhm_min_bitlen), (6 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_dtls_anti_replay), (12 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_dtls_badmac_limit), (6 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_encrypt_then_mac), (12 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_export_keys_cb), (6 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_export_keys_ext_cb), (6 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_extended_master_secret), (12 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_fallback), (12 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_handshake_timeout), (6 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_legacy_renegotiation), (12 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_max_frag_len), (44 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_max_version), (8 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_min_version), (8 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_own_cert), (6 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_psk), (136 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_psk_cb), (6 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_renegotiation), (12 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_renegotiation_enforced), (6 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_renegotiation_period), (12 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_session_cache), (8 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_session_tickets), (12 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_session_tickets_cb), (8 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_sig_hashes), (4 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_sni), (6 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_transport), (12 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_truncated_hmac), (12 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_conf_verify), (6 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_config_free), (104 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_context_load), (22 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_context_save), (1028 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_derive_keys), (472 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_free), (260 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_get_alpn_protocol), (6 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_get_current_mtu), (54 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_get_input_max_frag_len), (76 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_get_key_exchange_md_ssl_tls), (420 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_get_key_exchange_md_tls1_2), (316 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_get_max_frag_len), (4 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_get_max_out_record_payload), (156 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_get_output_max_frag_len), (80 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_get_peer_cert), (14 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_get_session), (36 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_get_session_pointer), (8 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_get_verify_result), (22 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_get_version), (148 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_handshake_wrapup), (324 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_handshake_wrapup_free_hs_transform), (176 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_hash_from_md_alg), (44 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_hs_hdr_len), (18 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_md_alg_from_hash), (44 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_optimize_checksum), (44 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_own_cert), (24 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_parse_certificate), (456 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_parse_finished), (464 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_pk_alg_from_sig), (16 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_psk_derive_premaster), (512 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_renegotiate), (216 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_resend_hello_request), (148 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_reset_checksum), (52 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_session_copy), (116 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_session_load), (28 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_session_reset), (6 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_session_reset_int), (222 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_session_save), (16 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_set_calc_verify_md), (64 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_set_datagram_packing), (14 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_set_hostname), (116 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_set_hs_authmode), (8 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_set_hs_ca_chain), (14 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_set_hs_own_cert), (10 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_set_hs_psk), (112 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_set_mtu), (6 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_set_session), (52 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_set_timer_cb), (14 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_set_verify), (6 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_sig_from_pk), (32 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_sig_from_pk_alg), (20 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_sig_hash_set_add), (28 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_sig_hash_set_const_hash), (6 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_sig_hash_set_find), (20 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_start_renegotiation), (220 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_tls_prf), (76 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_write_certificate), (584 bytes).
+    Removing ssl_tls.o(i.mbedtls_ssl_write_finished), (596 bytes).
+    Removing ssl_tls.o(i.ssl_append_key_cert), (60 bytes).
+    Removing ssl_tls.o(i.ssl_calc_finished_tls), (420 bytes).
+    Removing ssl_tls.o(i.ssl_calc_finished_tls_sha256), (352 bytes).
+    Removing ssl_tls.o(i.ssl_calc_finished_tls_sha384), (352 bytes).
+    Removing ssl_tls.o(i.ssl_calc_verify_tls), (240 bytes).
+    Removing ssl_tls.o(i.ssl_calc_verify_tls_sha256), (208 bytes).
+    Removing ssl_tls.o(i.ssl_calc_verify_tls_sha384), (208 bytes).
+    Removing ssl_tls.o(i.ssl_compute_master), (368 bytes).
+    Removing ssl_tls.o(i.ssl_conf_remove_psk), (54 bytes).
+    Removing ssl_tls.o(i.ssl_context_load), (708 bytes).
+    Removing ssl_tls.o(i.ssl_mfl_code_to_length), (44 bytes).
+    Removing ssl_tls.o(i.ssl_parse_certificate_chain), (652 bytes).
+    Removing ssl_tls.o(i.ssl_parse_certificate_verify), (772 bytes).
+    Removing ssl_tls.o(i.ssl_populate_transform), (1424 bytes).
+    Removing ssl_tls.o(i.ssl_session_load), (408 bytes).
+    Removing ssl_tls.o(i.ssl_session_save), (404 bytes).
+    Removing ssl_tls.o(i.ssl_srv_check_client_no_crt_notification), (164 bytes).
+    Removing ssl_tls.o(i.ssl_update_checksum_md5sha1), (36 bytes).
+    Removing ssl_tls.o(i.ssl_update_checksum_sha256), (10 bytes).
+    Removing ssl_tls.o(i.ssl_update_checksum_sha384), (10 bytes).
+    Removing ssl_tls.o(i.ssl_write_hello_request), (212 bytes).
+    Removing ssl_tls.o(i.tls1_prf), (484 bytes).
+    Removing ssl_tls.o(i.tls_prf_generic), (312 bytes).
+    Removing ssl_tls.o(i.tls_prf_sha256), (30 bytes).
+    Removing ssl_tls.o(i.tls_prf_sha384), (30 bytes).
+    Removing ssl_tls.o(.conststring), (65 bytes).
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+    Removing main.o(.rrx_text), (6 bytes).
+    Removing stm32f4xx_it.o(.rev16_text), (4 bytes).
+    Removing stm32f4xx_it.o(.revsh_text), (4 bytes).
+    Removing stm32f4xx_it.o(.rrx_text), (6 bytes).
+    Removing stm32f4xx_hal_msp.o(.rev16_text), (4 bytes).
+    Removing stm32f4xx_hal_msp.o(.revsh_text), (4 bytes).
+    Removing stm32f4xx_hal_msp.o(.rrx_text), (6 bytes).
+    Removing stm32f4xx_hal_msp.o(i.HAL_SPI_MspDeInit), (68 bytes).
+    Removing stm32f4xx_hal_msp.o(i.HAL_UART_MspDeInit), (40 bytes).
+    Removing stm32f4xx_hal_spi.o(.rev16_text), (4 bytes).
+    Removing stm32f4xx_hal_spi.o(.revsh_text), (4 bytes).
+    Removing stm32f4xx_hal_spi.o(.rrx_text), (6 bytes).
+    Removing stm32f4xx_hal_spi.o(i.HAL_SPI_Abort), (292 bytes).
+    Removing stm32f4xx_hal_spi.o(i.HAL_SPI_AbortCpltCallback), (2 bytes).
+    Removing stm32f4xx_hal_spi.o(i.HAL_SPI_Abort_IT), (292 bytes).
+    Removing stm32f4xx_hal_spi.o(i.HAL_SPI_DMAPause), (38 bytes).
+    Removing stm32f4xx_hal_spi.o(i.HAL_SPI_DMAResume), (38 bytes).
+    Removing stm32f4xx_hal_spi.o(i.HAL_SPI_DMAStop), (66 bytes).
+    Removing stm32f4xx_hal_spi.o(i.HAL_SPI_DeInit), (46 bytes).
+    Removing stm32f4xx_hal_spi.o(i.HAL_SPI_GetError), (4 bytes).
+    Removing stm32f4xx_hal_spi.o(i.HAL_SPI_MspDeInit), (2 bytes).
+    Removing stm32f4xx_hal_spi.o(i.HAL_SPI_MspInit), (2 bytes).
+    Removing stm32f4xx_hal_spi.o(i.HAL_SPI_Receive), (346 bytes).
+    Removing stm32f4xx_hal_spi.o(i.HAL_SPI_Receive_IT), (176 bytes).
+    Removing stm32f4xx_hal_spi.o(i.HAL_SPI_Transmit), (358 bytes).
+    Removing stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive_IT), (164 bytes).
+    Removing stm32f4xx_hal_spi.o(i.HAL_SPI_Transmit_IT), (148 bytes).
+    Removing stm32f4xx_hal_spi.o(i.SPI_2linesRxISR_16BIT), (48 bytes).
+    Removing stm32f4xx_hal_spi.o(i.SPI_2linesRxISR_8BIT), (48 bytes).
+    Removing stm32f4xx_hal_spi.o(i.SPI_2linesTxISR_16BIT), (48 bytes).
+    Removing stm32f4xx_hal_spi.o(i.SPI_2linesTxISR_8BIT), (48 bytes).
+    Removing stm32f4xx_hal_spi.o(i.SPI_AbortRx_ISR), (88 bytes).
+    Removing stm32f4xx_hal_spi.o(i.SPI_AbortTx_ISR), (28 bytes).
+    Removing stm32f4xx_hal_spi.o(i.SPI_CloseRxTx_ISR), (144 bytes).
+    Removing stm32f4xx_hal_spi.o(i.SPI_CloseRx_ISR), (76 bytes).
+    Removing stm32f4xx_hal_spi.o(i.SPI_CloseTx_ISR), (124 bytes).
+    Removing stm32f4xx_hal_spi.o(i.SPI_DMARxAbortCallback), (102 bytes).
+    Removing stm32f4xx_hal_spi.o(i.SPI_DMATxAbortCallback), (116 bytes).
+    Removing stm32f4xx_hal_spi.o(i.SPI_RxISR_16BIT), (32 bytes).
+    Removing stm32f4xx_hal_spi.o(i.SPI_RxISR_8BIT), (32 bytes).
+    Removing stm32f4xx_hal_spi.o(i.SPI_TxISR_16BIT), (32 bytes).
+    Removing stm32f4xx_hal_spi.o(i.SPI_TxISR_8BIT), (32 bytes).
+    Removing stm32f4xx_hal_rcc.o(.rev16_text), (4 bytes).
+    Removing stm32f4xx_hal_rcc.o(.revsh_text), (4 bytes).
+    Removing stm32f4xx_hal_rcc.o(.rrx_text), (6 bytes).
+    Removing stm32f4xx_hal_rcc.o(i.HAL_RCC_CSSCallback), (2 bytes).
+    Removing stm32f4xx_hal_rcc.o(i.HAL_RCC_DeInit), (4 bytes).
+    Removing stm32f4xx_hal_rcc.o(i.HAL_RCC_DisableCSS), (12 bytes).
+    Removing stm32f4xx_hal_rcc.o(i.HAL_RCC_EnableCSS), (12 bytes).
+    Removing stm32f4xx_hal_rcc.o(i.HAL_RCC_GetClockConfig), (64 bytes).
+    Removing stm32f4xx_hal_rcc.o(i.HAL_RCC_GetHCLKFreq), (12 bytes).
+    Removing stm32f4xx_hal_rcc.o(i.HAL_RCC_GetOscConfig), (180 bytes).
+    Removing stm32f4xx_hal_rcc.o(i.HAL_RCC_MCOConfig), (140 bytes).
+    Removing stm32f4xx_hal_rcc.o(i.HAL_RCC_NMI_IRQHandler), (28 bytes).
+    Removing stm32f4xx_hal_rcc_ex.o(.rev16_text), (4 bytes).
+    Removing stm32f4xx_hal_rcc_ex.o(.revsh_text), (4 bytes).
+    Removing stm32f4xx_hal_rcc_ex.o(.rrx_text), (6 bytes).
+    Removing stm32f4xx_hal_rcc_ex.o(i.HAL_RCCEx_DisablePLLI2S), (52 bytes).
+    Removing stm32f4xx_hal_rcc_ex.o(i.HAL_RCCEx_EnablePLLI2S), (108 bytes).
+    Removing stm32f4xx_hal_rcc_ex.o(i.HAL_RCCEx_GetPeriphCLKConfig), (80 bytes).
+    Removing stm32f4xx_hal_rcc_ex.o(i.HAL_RCCEx_GetPeriphCLKFreq), (96 bytes).
+    Removing stm32f4xx_hal_rcc_ex.o(i.HAL_RCCEx_PeriphCLKConfig), (340 bytes).
+    Removing stm32f4xx_hal_rcc_ex.o(i.HAL_RCCEx_SelectLSEMode), (28 bytes).
+    Removing stm32f4xx_hal_rcc_ex.o(i.HAL_RCC_DeInit), (308 bytes).
+    Removing stm32f4xx_hal_flash.o(.rev16_text), (4 bytes).
+    Removing stm32f4xx_hal_flash.o(.revsh_text), (4 bytes).
+    Removing stm32f4xx_hal_flash.o(.rrx_text), (6 bytes).
+    Removing stm32f4xx_hal_flash.o(i.FLASH_Program_Byte), (32 bytes).
+    Removing stm32f4xx_hal_flash.o(i.FLASH_Program_DoubleWord), (44 bytes).
+    Removing stm32f4xx_hal_flash.o(i.FLASH_Program_HalfWord), (36 bytes).
+    Removing stm32f4xx_hal_flash.o(i.FLASH_Program_Word), (36 bytes).
+    Removing stm32f4xx_hal_flash.o(i.FLASH_SetErrorCode), (124 bytes).
+    Removing stm32f4xx_hal_flash.o(i.FLASH_WaitForLastOperation), (80 bytes).
+    Removing stm32f4xx_hal_flash.o(i.HAL_FLASH_EndOfOperationCallback), (2 bytes).
+    Removing stm32f4xx_hal_flash.o(i.HAL_FLASH_GetError), (12 bytes).
+    Removing stm32f4xx_hal_flash.o(i.HAL_FLASH_IRQHandler), (204 bytes).
+    Removing stm32f4xx_hal_flash.o(i.HAL_FLASH_Lock), (20 bytes).
+    Removing stm32f4xx_hal_flash.o(i.HAL_FLASH_OB_Launch), (24 bytes).
+    Removing stm32f4xx_hal_flash.o(i.HAL_FLASH_OB_Lock), (20 bytes).
+    Removing stm32f4xx_hal_flash.o(i.HAL_FLASH_OB_Unlock), (40 bytes).
+    Removing stm32f4xx_hal_flash.o(i.HAL_FLASH_OperationErrorCallback), (2 bytes).
+    Removing stm32f4xx_hal_flash.o(i.HAL_FLASH_Program), (124 bytes).
+    Removing stm32f4xx_hal_flash.o(i.HAL_FLASH_Program_IT), (108 bytes).
+    Removing stm32f4xx_hal_flash.o(i.HAL_FLASH_Unlock), (44 bytes).
+    Removing stm32f4xx_hal_flash.o(.bss), (32 bytes).
+    Removing stm32f4xx_hal_flash_ex.o(.rev16_text), (4 bytes).
+    Removing stm32f4xx_hal_flash_ex.o(.revsh_text), (4 bytes).
+    Removing stm32f4xx_hal_flash_ex.o(.rrx_text), (6 bytes).
+    Removing stm32f4xx_hal_flash_ex.o(i.FLASH_Erase_Sector), (80 bytes).
+    Removing stm32f4xx_hal_flash_ex.o(i.FLASH_FlushCaches), (84 bytes).
+    Removing stm32f4xx_hal_flash_ex.o(i.FLASH_MassErase), (40 bytes).
+    Removing stm32f4xx_hal_flash_ex.o(i.HAL_FLASHEx_AdvOBGetConfig), (12 bytes).
+    Removing stm32f4xx_hal_flash_ex.o(i.HAL_FLASHEx_AdvOBProgram), (60 bytes).
+    Removing stm32f4xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase), (152 bytes).
+    Removing stm32f4xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase_IT), (104 bytes).
+    Removing stm32f4xx_hal_flash_ex.o(i.HAL_FLASHEx_OBGetConfig), (64 bytes).
+    Removing stm32f4xx_hal_flash_ex.o(i.HAL_FLASHEx_OBProgram), (204 bytes).
+    Removing stm32f4xx_hal_flash_ex.o(i.HAL_FLASHEx_OB_DeSelectPCROP), (20 bytes).
+    Removing stm32f4xx_hal_flash_ex.o(i.HAL_FLASHEx_OB_SelectPCROP), (24 bytes).
+    Removing stm32f4xx_hal_flash_ramfunc.o(.rev16_text), (4 bytes).
+    Removing stm32f4xx_hal_flash_ramfunc.o(.revsh_text), (4 bytes).
+    Removing stm32f4xx_hal_flash_ramfunc.o(.rrx_text), (6 bytes).
+    Removing stm32f4xx_hal_flash_ramfunc.o(i.HAL_FLASHEx_DisableFlashSleepMode), (44 bytes).
+    Removing stm32f4xx_hal_flash_ramfunc.o(i.HAL_FLASHEx_EnableFlashSleepMode), (44 bytes).
+    Removing stm32f4xx_hal_flash_ramfunc.o(i.HAL_FLASHEx_StartFlashInterfaceClk), (44 bytes).
+    Removing stm32f4xx_hal_flash_ramfunc.o(i.HAL_FLASHEx_StopFlashInterfaceClk), (44 bytes).
+    Removing stm32f4xx_hal_gpio.o(.rev16_text), (4 bytes).
+    Removing stm32f4xx_hal_gpio.o(.revsh_text), (4 bytes).
+    Removing stm32f4xx_hal_gpio.o(.rrx_text), (6 bytes).
+    Removing stm32f4xx_hal_gpio.o(i.HAL_GPIO_DeInit), (300 bytes).
+    Removing stm32f4xx_hal_gpio.o(i.HAL_GPIO_EXTI_Callback), (2 bytes).
+    Removing stm32f4xx_hal_gpio.o(i.HAL_GPIO_EXTI_IRQHandler), (24 bytes).
+    Removing stm32f4xx_hal_gpio.o(i.HAL_GPIO_LockPin), (34 bytes).
+    Removing stm32f4xx_hal_gpio.o(i.HAL_GPIO_ReadPin), (10 bytes).
+    Removing stm32f4xx_hal_gpio.o(i.HAL_GPIO_TogglePin), (16 bytes).
+    Removing stm32f4xx_hal_dma_ex.o(.rev16_text), (4 bytes).
+    Removing stm32f4xx_hal_dma_ex.o(.revsh_text), (4 bytes).
+    Removing stm32f4xx_hal_dma_ex.o(.rrx_text), (6 bytes).
+    Removing stm32f4xx_hal_dma_ex.o(i.DMA_MultiBufferSetConfig), (30 bytes).
+    Removing stm32f4xx_hal_dma_ex.o(i.HAL_DMAEx_ChangeMemory), (14 bytes).
+    Removing stm32f4xx_hal_dma_ex.o(i.HAL_DMAEx_MultiBufferStart), (100 bytes).
+    Removing stm32f4xx_hal_dma_ex.o(i.HAL_DMAEx_MultiBufferStart_IT), (2432 bytes).
+    Removing stm32f4xx_hal_dma.o(.rev16_text), (4 bytes).
+    Removing stm32f4xx_hal_dma.o(.revsh_text), (4 bytes).
+    Removing stm32f4xx_hal_dma.o(.rrx_text), (6 bytes).
+    Removing stm32f4xx_hal_dma.o(i.HAL_DMA_Abort), (146 bytes).
+    Removing stm32f4xx_hal_dma.o(i.HAL_DMA_DeInit), (98 bytes).
+    Removing stm32f4xx_hal_dma.o(i.HAL_DMA_GetError), (4 bytes).
+    Removing stm32f4xx_hal_dma.o(i.HAL_DMA_PollForTransfer), (288 bytes).
+    Removing stm32f4xx_hal_dma.o(i.HAL_DMA_RegisterCallback), (82 bytes).
+    Removing stm32f4xx_hal_dma.o(i.HAL_DMA_Start), (70 bytes).
+    Removing stm32f4xx_hal_dma.o(i.HAL_DMA_UnRegisterCallback), (96 bytes).
+    Removing stm32f4xx_hal_pwr.o(.rev16_text), (4 bytes).
+    Removing stm32f4xx_hal_pwr.o(.revsh_text), (4 bytes).
+    Removing stm32f4xx_hal_pwr.o(.rrx_text), (6 bytes).
+    Removing stm32f4xx_hal_pwr.o(i.HAL_PWR_ConfigPVD), (124 bytes).
+    Removing stm32f4xx_hal_pwr.o(i.HAL_PWR_DeInit), (24 bytes).
+    Removing stm32f4xx_hal_pwr.o(i.HAL_PWR_DisableBkUpAccess), (24 bytes).
+    Removing stm32f4xx_hal_pwr.o(i.HAL_PWR_DisablePVD), (12 bytes).
+    Removing stm32f4xx_hal_pwr.o(i.HAL_PWR_DisableSEVOnPend), (16 bytes).
+    Removing stm32f4xx_hal_pwr.o(i.HAL_PWR_DisableSleepOnExit), (16 bytes).
+    Removing stm32f4xx_hal_pwr.o(i.HAL_PWR_DisableWakeUpPin), (16 bytes).
+    Removing stm32f4xx_hal_pwr.o(i.HAL_PWR_EnableBkUpAccess), (24 bytes).
+    Removing stm32f4xx_hal_pwr.o(i.HAL_PWR_EnablePVD), (12 bytes).
+    Removing stm32f4xx_hal_pwr.o(i.HAL_PWR_EnableSEVOnPend), (16 bytes).
+    Removing stm32f4xx_hal_pwr.o(i.HAL_PWR_EnableSleepOnExit), (16 bytes).
+    Removing stm32f4xx_hal_pwr.o(i.HAL_PWR_EnableWakeUpPin), (16 bytes).
+    Removing stm32f4xx_hal_pwr.o(i.HAL_PWR_EnterSLEEPMode), (32 bytes).
+    Removing stm32f4xx_hal_pwr.o(i.HAL_PWR_EnterSTANDBYMode), (32 bytes).
+    Removing stm32f4xx_hal_pwr.o(i.HAL_PWR_EnterSTOPMode), (56 bytes).
+    Removing stm32f4xx_hal_pwr.o(i.HAL_PWR_PVDCallback), (2 bytes).
+    Removing stm32f4xx_hal_pwr.o(i.HAL_PWR_PVD_IRQHandler), (28 bytes).
+    Removing stm32f4xx_hal_pwr_ex.o(.rev16_text), (4 bytes).
+    Removing stm32f4xx_hal_pwr_ex.o(.revsh_text), (4 bytes).
+    Removing stm32f4xx_hal_pwr_ex.o(.rrx_text), (6 bytes).
+    Removing stm32f4xx_hal_pwr_ex.o(i.HAL_PWREx_ControlVoltageScaling), (176 bytes).
+    Removing stm32f4xx_hal_pwr_ex.o(i.HAL_PWREx_DisableBkUpReg), (60 bytes).
+    Removing stm32f4xx_hal_pwr_ex.o(i.HAL_PWREx_DisableFlashPowerDown), (12 bytes).
+    Removing stm32f4xx_hal_pwr_ex.o(i.HAL_PWREx_DisableLowRegulatorLowVoltage), (12 bytes).
+    Removing stm32f4xx_hal_pwr_ex.o(i.HAL_PWREx_DisableMainRegulatorLowVoltage), (12 bytes).
+    Removing stm32f4xx_hal_pwr_ex.o(i.HAL_PWREx_EnableBkUpReg), (60 bytes).
+    Removing stm32f4xx_hal_pwr_ex.o(i.HAL_PWREx_EnableFlashPowerDown), (12 bytes).
+    Removing stm32f4xx_hal_pwr_ex.o(i.HAL_PWREx_EnableLowRegulatorLowVoltage), (12 bytes).
+    Removing stm32f4xx_hal_pwr_ex.o(i.HAL_PWREx_EnableMainRegulatorLowVoltage), (12 bytes).
+    Removing stm32f4xx_hal_pwr_ex.o(i.HAL_PWREx_GetVoltageRange), (16 bytes).
+    Removing stm32f4xx_hal_cortex.o(.rev16_text), (4 bytes).
+    Removing stm32f4xx_hal_cortex.o(.revsh_text), (4 bytes).
+    Removing stm32f4xx_hal_cortex.o(.rrx_text), (6 bytes).
+    Removing stm32f4xx_hal_cortex.o(i.HAL_MPU_ConfigRegion), (84 bytes).
+    Removing stm32f4xx_hal_cortex.o(i.HAL_MPU_Disable), (28 bytes).
+    Removing stm32f4xx_hal_cortex.o(i.HAL_MPU_Enable), (36 bytes).
+    Removing stm32f4xx_hal_cortex.o(i.HAL_NVIC_ClearPendingIRQ), (26 bytes).
+    Removing stm32f4xx_hal_cortex.o(i.HAL_NVIC_DisableIRQ), (34 bytes).
+    Removing stm32f4xx_hal_cortex.o(i.HAL_NVIC_GetActive), (36 bytes).
+    Removing stm32f4xx_hal_cortex.o(i.HAL_NVIC_GetPendingIRQ), (36 bytes).
+    Removing stm32f4xx_hal_cortex.o(i.HAL_NVIC_GetPriority), (82 bytes).
+    Removing stm32f4xx_hal_cortex.o(i.HAL_NVIC_GetPriorityGrouping), (16 bytes).
+    Removing stm32f4xx_hal_cortex.o(i.HAL_NVIC_SetPendingIRQ), (26 bytes).
+    Removing stm32f4xx_hal_cortex.o(i.HAL_NVIC_SystemReset), (36 bytes).
+    Removing stm32f4xx_hal_cortex.o(i.HAL_SYSTICK_CLKSourceConfig), (24 bytes).
+    Removing stm32f4xx_hal_cortex.o(i.HAL_SYSTICK_Callback), (2 bytes).
+    Removing stm32f4xx_hal_cortex.o(i.HAL_SYSTICK_IRQHandler), (8 bytes).
+    Removing stm32f4xx_hal.o(.rev16_text), (4 bytes).
+    Removing stm32f4xx_hal.o(.revsh_text), (4 bytes).
+    Removing stm32f4xx_hal.o(.rrx_text), (6 bytes).
+    Removing stm32f4xx_hal.o(i.HAL_DBGMCU_DisableDBGSleepMode), (16 bytes).
+    Removing stm32f4xx_hal.o(i.HAL_DBGMCU_DisableDBGStandbyMode), (16 bytes).
+    Removing stm32f4xx_hal.o(i.HAL_DBGMCU_DisableDBGStopMode), (16 bytes).
+    Removing stm32f4xx_hal.o(i.HAL_DBGMCU_EnableDBGSleepMode), (16 bytes).
+    Removing stm32f4xx_hal.o(i.HAL_DBGMCU_EnableDBGStandbyMode), (16 bytes).
+    Removing stm32f4xx_hal.o(i.HAL_DBGMCU_EnableDBGStopMode), (16 bytes).
+    Removing stm32f4xx_hal.o(i.HAL_DeInit), (52 bytes).
+    Removing stm32f4xx_hal.o(i.HAL_DisableCompensationCell), (12 bytes).
+    Removing stm32f4xx_hal.o(i.HAL_EnableCompensationCell), (12 bytes).
+    Removing stm32f4xx_hal.o(i.HAL_GetDEVID), (16 bytes).
+    Removing stm32f4xx_hal.o(i.HAL_GetHalVersion), (8 bytes).
+    Removing stm32f4xx_hal.o(i.HAL_GetREVID), (12 bytes).
+    Removing stm32f4xx_hal.o(i.HAL_GetTickFreq), (12 bytes).
+    Removing stm32f4xx_hal.o(i.HAL_GetTickPrio), (12 bytes).
+    Removing stm32f4xx_hal.o(i.HAL_GetUIDw0), (12 bytes).
+    Removing stm32f4xx_hal.o(i.HAL_GetUIDw1), (12 bytes).
+    Removing stm32f4xx_hal.o(i.HAL_GetUIDw2), (12 bytes).
+    Removing stm32f4xx_hal.o(i.HAL_MspDeInit), (2 bytes).
+    Removing stm32f4xx_hal.o(i.HAL_MspInit), (2 bytes).
+    Removing stm32f4xx_hal.o(i.HAL_ResumeTick), (14 bytes).
+    Removing stm32f4xx_hal.o(i.HAL_SetTickFreq), (36 bytes).
+    Removing stm32f4xx_hal.o(i.HAL_SuspendTick), (14 bytes).
+    Removing stm32f4xx_hal_exti.o(.rev16_text), (4 bytes).
+    Removing stm32f4xx_hal_exti.o(.revsh_text), (4 bytes).
+    Removing stm32f4xx_hal_exti.o(.rrx_text), (6 bytes).
+    Removing stm32f4xx_hal_exti.o(i.HAL_EXTI_ClearConfigLine), (108 bytes).
+    Removing stm32f4xx_hal_exti.o(i.HAL_EXTI_ClearPending), (20 bytes).
+    Removing stm32f4xx_hal_exti.o(i.HAL_EXTI_GenerateSWI), (20 bytes).
+    Removing stm32f4xx_hal_exti.o(i.HAL_EXTI_GetConfigLine), (148 bytes).
+    Removing stm32f4xx_hal_exti.o(i.HAL_EXTI_GetHandle), (12 bytes).
+    Removing stm32f4xx_hal_exti.o(i.HAL_EXTI_GetPending), (24 bytes).
+    Removing stm32f4xx_hal_exti.o(i.HAL_EXTI_IRQHandler), (36 bytes).
+    Removing stm32f4xx_hal_exti.o(i.HAL_EXTI_RegisterCallback), (14 bytes).
+    Removing stm32f4xx_hal_exti.o(i.HAL_EXTI_SetConfigLine), (168 bytes).
+    Removing stm32f4xx_hal_tim.o(.rev16_text), (4 bytes).
+    Removing stm32f4xx_hal_tim.o(.revsh_text), (4 bytes).
+    Removing stm32f4xx_hal_tim.o(.rrx_text), (6 bytes).
+    Removing stm32f4xx_hal_tim_ex.o(.rev16_text), (4 bytes).
+    Removing stm32f4xx_hal_tim_ex.o(.revsh_text), (4 bytes).
+    Removing stm32f4xx_hal_tim_ex.o(.rrx_text), (6 bytes).
+    Removing stm32f4xx_hal_uart.o(.rev16_text), (4 bytes).
+    Removing stm32f4xx_hal_uart.o(.revsh_text), (4 bytes).
+    Removing stm32f4xx_hal_uart.o(.rrx_text), (6 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_HalfDuplex_EnableReceiver), (50 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_HalfDuplex_EnableTransmitter), (50 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_HalfDuplex_Init), (108 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_LIN_Init), (128 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_LIN_SendBreak), (60 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_MultiProcessor_EnterMuteMode), (60 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_MultiProcessor_ExitMuteMode), (60 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_MultiProcessor_Init), (142 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UARTEx_ReceiveToIdle), (254 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UARTEx_ReceiveToIdle_DMA), (86 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UARTEx_ReceiveToIdle_IT), (86 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UARTEx_RxEventCallback), (2 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_Abort), (210 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_AbortCpltCallback), (2 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_AbortReceive), (148 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_AbortReceiveCpltCallback), (2 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_AbortReceive_IT), (152 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_AbortTransmit), (98 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_AbortTransmitCpltCallback), (2 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_AbortTransmit_IT), (104 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_Abort_IT), (244 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_DMAPause), (146 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_DMAResume), (140 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_DMAStop), (112 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_DeInit), (52 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_ErrorCallback), (2 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_GetError), (4 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_GetState), (10 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_IRQHandler), (616 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_MspDeInit), (2 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_MspInit), (2 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_Receive), (192 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_Receive_DMA), (42 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_Receive_IT), (42 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_RxCpltCallback), (2 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_RxHalfCpltCallback), (2 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_Transmit_DMA), (140 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_Transmit_IT), (62 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_TxCpltCallback), (2 bytes).
+    Removing stm32f4xx_hal_uart.o(i.HAL_UART_TxHalfCpltCallback), (2 bytes).
+    Removing stm32f4xx_hal_uart.o(i.UART_DMAAbortOnError), (16 bytes).
+    Removing stm32f4xx_hal_uart.o(i.UART_DMAError), (74 bytes).
+    Removing stm32f4xx_hal_uart.o(i.UART_DMAReceiveCplt), (130 bytes).
+    Removing stm32f4xx_hal_uart.o(i.UART_DMARxAbortCallback), (44 bytes).
+    Removing stm32f4xx_hal_uart.o(i.UART_DMARxHalfCplt), (26 bytes).
+    Removing stm32f4xx_hal_uart.o(i.UART_DMARxOnlyAbortCallback), (22 bytes).
+    Removing stm32f4xx_hal_uart.o(i.UART_DMATransmitCplt), (66 bytes).
+    Removing stm32f4xx_hal_uart.o(i.UART_DMATxAbortCallback), (44 bytes).
+    Removing stm32f4xx_hal_uart.o(i.UART_DMATxHalfCplt), (10 bytes).
+    Removing stm32f4xx_hal_uart.o(i.UART_DMATxOnlyAbortCallback), (20 bytes).
+    Removing stm32f4xx_hal_uart.o(i.UART_EndRxTransfer), (78 bytes).
+    Removing stm32f4xx_hal_uart.o(i.UART_EndTxTransfer), (28 bytes).
+    Removing stm32f4xx_hal_uart.o(i.UART_Receive_IT), (192 bytes).
+    Removing stm32f4xx_hal_uart.o(i.UART_Start_Receive_DMA), (148 bytes).
+    Removing stm32f4xx_hal_uart.o(i.UART_Start_Receive_IT), (58 bytes).
+    Removing system_stm32f4xx.o(.rev16_text), (4 bytes).
+    Removing system_stm32f4xx.o(.revsh_text), (4 bytes).
+    Removing system_stm32f4xx.o(.rrx_text), (6 bytes).
+    Removing system_stm32f4xx.o(i.SystemCoreClockUpdate), (120 bytes).
+    Removing loopback.o(i.loopback_tcpc), (388 bytes).
+    Removing loopback.o(i.loopback_tcps), (388 bytes).
+    Removing loopback.o(i.loopback_udps), (264 bytes).
+    Removing loopback.o(.data), (2 bytes).
+    Removing w5500.o(i.wiz_recv_ignore), (66 bytes).
+    Removing socket.o(i.ctlsocket), (184 bytes).
+    Removing socket.o(i.disconnect), (140 bytes).
+    Removing socket.o(i.listen), (112 bytes).
+    Removing socket.o(i.recvfrom), (532 bytes).
+    Removing socket.o(i.sendto), (384 bytes).
+    Removing socket.o(i.setsockopt), (262 bytes).
+    Removing wizchip_conf.o(i.reg_wizchip_bus_cbfunc), (44 bytes).
+    Removing wizchip_conf.o(i.wizphy_getphystat), (26 bytes).
+    Removing w5x00_spi.o(.rev16_text), (4 bytes).
+    Removing w5x00_spi.o(.revsh_text), (4 bytes).
+    Removing w5x00_spi.o(.rrx_text), (6 bytes).
+    Removing dadd.o(.text), (334 bytes).
+    Removing dmul.o(.text), (228 bytes).
+    Removing ddiv.o(.text), (222 bytes).
+    Removing dfixul.o(.text), (48 bytes).
+    Removing cdrcmple.o(.text), (48 bytes).
+    Removing depilogue.o(.text), (186 bytes).
+
+499 unused section(s) (total 44073 bytes) removed from the image.
