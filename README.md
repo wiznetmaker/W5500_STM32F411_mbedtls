@@ -40,12 +40,12 @@ In the TCP client over SSL configuration, the target IP is the IP of your deskto
 static uint8_t g_ssl_target_ip[4] = {192, 168, 11, 3};
 ```
 
-In order to change SSL settings, modify 'ssl_config.h' located in the same directory with TCP Client over SSL example.
+In order to change SSL settings, modify 'ssl_config.h' located in 'W5X00_STM32F411_SSL4\port\mbedtls\ssl_config.h'.
 
 
 ## Step 3: Upload and Run
 
-1. Connect to the serial COM port of Raspberry Pi Pico, W5100S-EVB-Pico, W5500-EVB-Pico, W55RP20-EVB-Pico, W5100S-EVB-Pico2 or W5500-EVB-Pico2 with Tera Term.
+1. Connect to the serial COM port of device.
 
 ![][link-connect_to_serial_com_port]
 
@@ -76,7 +76,3 @@ s_server -accept 443 -cert server.crt -key server.key
 
 4. Reset your board.
 
-
-## Appendix
-
-- mbedTLS library was ported to use SSL, please refer to following link to find version of ported mbed TLS.
