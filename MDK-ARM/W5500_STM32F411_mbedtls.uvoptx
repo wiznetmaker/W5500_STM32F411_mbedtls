@@ -22,7 +22,7 @@
   </DaveTm>
 
   <Target>
-    <TargetName>W5X00_STM32F411_mbedtls</TargetName>
+    <TargetName>W5500_STM32F411_mbedtls</TargetName>
     <ToolsetNumber>0x4</ToolsetNumber>
     <ToolsetName>ARM-ADS</ToolsetName>
     <TargetOption>
